@@ -194,3 +194,48 @@ p {
   text-align: justify;
   margin: 12px 0;
 }
+body {
+  background-color: #fff9f0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #4a3f35;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.principal {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  margin: 25px 0;
+  border-radius: 16px;
+  border-bottom: 3px solid #f0d9c6;
+}
+
+h1 {
+  color: #b38867;
+  text-align: center;
+}
+
+h2 {
+  color: #c49a78;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f2e0d0;
+}
+
+p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+/* === FUNDOS COM SUAS IMAGENS === */
+.fundo-flor     { background-image: url('Flor.png');      background-size: cover; background-position: center; background-attachment: fixed; }
+.fundo-azul     { background-image: url('Fundo Azul.png'); background-size: cover; background-position: center; background-attachment: fixed; }
+.fundo-passaro  { background-image: url('Passaro.png');    background-size: cover; background-position: center; background-attachment: fixed; }
+.fundo-xicara   { background-image: url('Xícara.png');     background-size: cover; background-position: center; background-attachment: fixed; }
