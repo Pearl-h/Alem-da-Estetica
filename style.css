@@ -131,75 +131,64 @@ button[disabled] {
     padding: 16px;
   }
 }
-/* ===== ESTILO GERAL DA PÁGINA ===== */
+* === ESTILO GERAL === */
 body {
-  /* Fundo suave com tom pastel */
   background-color: #fff9f0;
-  /* Fonte elegante e limpa */
-  font-family: 'Georgia', 'Times New Roman', serif;
-  color: #4a3f35; /* Texto em tom marrom suave */
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #4a3f35;
   margin: 0;
   padding: 0;
-  line-height: 1.7; /* Espaçamento confortável */
+  line-height: 1.7;
 }
 
-/* ===== ÁREA PRINCIPAL (LAYOUT LARGO) ===== */
+/* === ÁREA PRINCIPAL === */
 .principal {
-  width: 95%; /* Largo como pediu */
-  max-width: 1200px; /* Limite para não ficar exagerado */
-  margin: 0 auto; /* Centraliza */
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* ===== SEÇÕES DO CONTEÚDO ===== */
+/* === SEÇÕES === */
 section {
-  /* Fundo branco suave */
   background-color: rgba(255, 255, 255, 0.85);
   padding: 30px;
   margin: 25px 0;
-  /* ✅ Cantos arredondados */
-  border-radius: 16px;
-  /* ✅ Linha separadora entre seções */
-  border-bottom: 3px solid #f0d9c6;
-  box-sizing: border-box;
+  border-radius: 16px;       /* cantos arredondados */
+  border-bottom: 3px solid #f0d9c6; /* linha separadora */
 }
 
-/* ===== TÍTULOS ===== */
+/* === TÍTULOS === */
 h1 {
-  font-family: 'Georgia', serif;
-  color: #b38867; /* Marrom pastel */
+  color: #b38867;
   text-align: center;
   font-size: 32px;
-  margin-bottom: 30px;
 }
 
 h2 {
-  font-family: 'Georgia', serif;
-  color: #c49a78; /* Tom pastel um pouco mais claro */
+  color: #c49a78;
   padding-bottom: 8px;
   border-bottom: 2px solid #f2e0d0;
   font-size: 24px;
 }
 
-/* ===== IMAGENS DE FUNDO POR PÁGINA ===== */
-/* ✅ Aqui você coloca suas imagens de fundo! */
-.pagina-dicas-1 {
+/* === IMAGENS DE FUNDO === */
+/* ⚠️ COLOQUE O NOME EXATO DO SEU ARQUIVO */
+.pagina1 {
   background-image: url('imagem1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-.pagina-dicas-2 {
+.pagina2 {
   background-image: url('imagem2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Se tiver mais páginas, é só repetir mudando o nome e o arquivo */
-
-/* ===== TEXTOS ===== */
+/* === TEXTOS === */
 p {
   font-size: 17px;
   text-align: justify;
