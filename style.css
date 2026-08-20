@@ -55,6 +55,14 @@ img {
   border-radius: 6px;
 }
 
+.card {
+  width: 200px;
+  height: 200px;
+  border-radious: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
 .center {
   text-align: center;
 }
