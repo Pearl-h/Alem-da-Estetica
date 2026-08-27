@@ -226,24 +226,6 @@ function aoSelecionarOpcao(idDaQuestao, textoDaOpcao) {
     respostasSalvas[idDaQuestao] = textoDaOpcao; 
 }
 
-function enviarDadosParaOBanco() {
-    fetch('URL_DA_SUA_API_OU_BACKEND/respostas', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(respostasSalvas) // Transforma o objeto em texto JSON
-    })
-    .then(response => response.json())
-    .then(dados => {
-        console.log('Dados salvos com sucesso:', dados);
-        alert('Quiz finalizado e respostas salvas!');
-    })
-    .catch(erro => {
-        console.error('Erro ao salvar no banco:', erro);
-    });
-}
-
 let currentQuestionIndex = 0;
 let totalScore = 0;
 
