@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ame Sua Mente - Conteúdos</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteúdos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <nav>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="conteudos.html">Conteúdos</a><li>
-            <li><a href="contatos.html">Contatos</a></li>
-  </nav>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="conteudos.html">Conteúdos</a>
+      <a href="contatos.html">Contatos</a>
+    </div>
   </header>
 
-  <section class="conteudos-hero">
-    <div class="conteudos-hero-container">
-      <div class="hero-title-box">
-        <h1>Conteúdos</h1>
-      </div>
-      <div class="hero-description-box">
-        <p>
-          Navegue pelos diversos formatos de conteúdos pautados pelo rigor científico, mas em uma linguagem simples e objetiva. Uma variedade de assuntos e dicas práticas, incluindo temáticas específicas para a comunidade escolar.
-        </p>
-        <p>
-          A disseminação de conhecimento é determinante para desconstruir estigmas e promover a saúde mental.
-        </p>
-      </div>
+  <main class="hero-container">
+    <section class="hero-text">
+      <h1 class="hero-title">Conteúdos</h1>
+      <p class="hero-description">
+        Explore nossos conteúdos e descubra informações, reflexões e recursos que promovem uma relação mais saudável com a própria imagem e autoestima.
+      </p>
+    </section>
+  </main>
+
+  <section class="cards-section">
+    <h2>Explore Nossos Conteúdos</h2>
+    <div class="cards-container">
+      
+      <a href="Conteúdos/historia.html" class="card">
+        <div class="card-icon">📜</div>
+        <h3>História</h3>
+        <p>Conheça a evolução dos padrões estéticos ao longo das décadas</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+      
+      <a href="Conteúdos/quiz.html" class="card">
+        <div class="card-icon">❓</div>
+        <h3>Quiz</h3>
+        <p>Descubra o quanto estéticas afetam sua vida</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <a href="Conteúdos/dashboard.html" class="card">
+        <div class="card-icon">📊</div>
+        <h3>Dados & Gráficos</h3>
+        <p>Visualize dados e estatísticas sobre saúde mental e estética</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <a href="Conteúdos/dicas.html" class="card">
+        <div class="card-icon">💡</div>
+        <h3>Dicas</h3>
+        <p>Receba dicas práticas para uma relação saudável com a estética</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <a href="Conteúdos/artigos.html" class="card">
+        <div class="card-icon">📰</div>
+        <h3>Artigos</h3>
+        <p>Leia artigos detalhados sobre os impactos da estética na saúde mental</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <a href="Conteúdos/midia.html" class="card">
+        <div class="card-icon">🎬</div>
+        <h3>Mídia</h3>
+        <p>Assista a vídeos e conheça recursos multimídia relacionados</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
     </div>
   </section>
 
-  <section class="categories-section">
-    <div class="categories-container">
+  <script src="script.js"></script>
 
-      <div class="categories-sidebar">
-        <h2>categorias <span class="plus-icon">+</span></h2>
-      </div>
-
-      <div class="cards-grid">
-
-        <a href="historia.html" class="card-item">
-          <div class="card-icon-wrapper">
-            <span class="card-icon">📖</span>
-          </div>
-          <h3>História</h3>
-        </a>
-
-        <a href="quiz.html" class="card-item">
-          <div class="card-icon-wrapper">
-            <span class="card-icon">❓</span>
-          </div>
-          <h3>Quiz</h3>
-        </a>
-
-        <a href="dicas.html" class="card-item">
-          <div class="card-icon-wrapper">
-            <span class="card-icon">💡</span>
-          </div>
-          <h3>Dicas</h3>
-        </a>
-
-        <a href="artigos.html" class="card-item">
-          <div class="card-icon-wrapper">
-            <span class="card-icon">📄</span>
-          </div>
-          <h3>Artigos</h3>
-        </a>
-
-        <a href="na-midia.html" class="card-item">
-          <div class="card-icon-wrapper">
-            <span class="card-icon">📢</span>
-          </div>
-          <h3>Na Mídia</h3>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
+    <footer>
+    <p>&copy; Projeto  Acadêmico - Além da Estética 2026.</p>
+  </footer>
+  
 </body>
 </html>
