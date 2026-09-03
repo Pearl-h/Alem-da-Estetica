@@ -48,61 +48,6 @@
             gap: 0.5rem;
         }
 
-        /* 🎥 VÍDEOS */
-        .grid-videos {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        @media (min-width: 700px) {
-            .grid-videos {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .video-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 20px;
-            box-shadow: 0 5px 14px rgba(123, 82, 149, 0.12);
-            border-left: 5px solid #b794d4;
-            transition: transform 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-card h3 {
-            font-size: 1.1rem;
-            color: #6a4782;
-            margin-bottom: 0.8rem;
-            line-height: 1.5;
-        }
-
-        .video-card p {
-            font-size: 0.95rem;
-            color: #7c6492;
-            margin-bottom: 1rem;
-        }
-
-        .video-card a {
-            display: inline-block;
-            padding: 0.6rem 1.3rem;
-            background: linear-gradient(135deg, #a87fd1, #9567c2);
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .video-card a:hover {
-            opacity: 0.9;
-        }
-
         /* 🧠 SAÚDE MENTAL — Seções */
         .secao {
             background: #fff;
@@ -138,12 +83,77 @@
             left: 0;
         }
 
+        /* 🎥 VÍDEOS — Texto em cima, link embaixo */
+        .grid-videos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 700px) {
+            .grid-videos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .video-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 14px rgba(123, 82, 149, 0.12);
+            border-left: 5px solid #b794d4;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card h3 {
+            font-size: 1.1rem;
+            color: #6a4782;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .video-card p {
+            font-size: 0.95rem;
+            color: #7c6492;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .video-link {
+            margin-top: auto;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e5d9f0;
+        }
+
+        .video-link a {
+            display: block;
+            padding: 0.7rem 1.3rem;
+            background: linear-gradient(135deg, #a87fd1, #9567c2);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: opacity 0.2s;
+        }
+
+        .video-link a:hover {
+            opacity: 0.9;
+        }
+
         .destaque-final {
             background: linear-gradient(135deg, #e9dff2, #f3eaf9);
             padding: 2rem;
             border-radius: 20px;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             border-left: 5px solid #b794d4;
         }
 
@@ -156,48 +166,9 @@
 <body>
 
     <h1>🎬 Mídia e Recursos</h1>
-    <p class="intro">Vídeos selecionados e conteúdos sobre estética, autocuidado, autoestima e saúde mental. 💜</p>
+    <p class="intro">Conteúdos sobre estética, autocuidado, autoestima e saúde mental. 💜</p>
 
-    <!-- 🎥 VÍDEOS RECOMENDADOS -->
-    <h2>📺 Vídeos Recomendados</h2>
-    <div class="grid-videos">
-        <!-- Vídeo 1 -->
-        <div class="video-card">
-            <h3>✨ Dicas de Beleza e Autocuidado — Glow Up</h3>
-            <p>Com dicas práticas e simples de cuidados com unhas, cabelo, pele, lábios e hábitos de beleza que elevam a autoestima sem esforço excessivo. Um guia completo de cuidados diários!</p>
-            <a href="https://youtu.be/nIekwODLiQM?si=olW_wRJPErBNPN0i" target="_blank">▶️ Assistir</a>
-        </div>
-
-        <!-- Vídeo 2 -->
-        <div class="video-card">
-            <h3>🎀 Hábitos de Beleza que Mudaram Minha Vida</h3>
-            <p>Hábitos simples de rotina que fazem toda a diferença na pele, no cabelo e na autoimagem. Pequenas mudanças que transformam a relação com o próprio corpo e com a estética.</p>
-            <a href="https://youtu.be/XPpxC2D39vw?si=USKJHUW7Qf9NCdMi" target="_blank">▶️ Assistir</a>
-        </div>
-
-        <!-- Vídeo 3 -->
-        <div class="video-card">
-            <h3>💭 Pressão Estética e Saúde Mental</h3>
-            <p>Reflexão importante sobre o mito do "corpo ideal" e como a busca por padrões inatingíveis afeta nossa saúde física e emocional. Um convite ao equilíbrio e à aceitação de si mesmo.</p>
-            <a href="https://youtu.be/01Mu8MgUfO8?si=PNIcgQT95RFUNQrz" target="_blank">▶️ Assistir</a>
-        </div>
-
-        <!-- Vídeo 4 -->
-        <div class="video-card">
-            <h3>⚡ Hábitos para Mais Energia e Bem-Estar</h3>
-            <p>Rotinas e hábitos que ajudam a combater o cansaço, a preguiça e a desmotivação. Cuidar de si também é ter energia para viver — autocuidado que fortalece corpo e mente.</p>
-            <a href="https://youtu.be/v36ugYYYzh0?si=INmMz59QrbYMietf" target="_blank">▶️ Assistir</a>
-        </div>
-
-        <!-- Vídeo 5 -->
-        <div class="video-card">
-            <h3>🧠 Construindo Autoestima Verdadeira</h3>
-            <p>Psicologia prática: o que realmente constrói uma autoestima saudável — para além da aparência e das conquistas. Como valorizar-se de forma genuína e duradoura.</p>
-            <a href="https://youtu.be/R6uMbRW3Vzc?si=_BYvgxdAoyy9yCjj" target="_blank">▶️ Assistir</a>
-        </div>
-    </div>
-
-    <!-- 🧠 SAÚDE MENTAL E AUTOESTIMA -->
+    <!-- 🧠 SAÚDE MENTAL E AUTOESTIMA — AGORA EM CIMA! -->
     <h2>🧠 Saúde Mental e Autoestima</h2>
 
     <div class="secao">
@@ -212,7 +183,7 @@
     <div class="secao">
         <h3>🛡️ Proteja sua saúde mental</h3>
         <ul>
-            <li><strong>Estabeleça limites:</strong> aprenda a dizer “não” e se afaste de relações que sugam sua energia.</li>
+            <li><strong>Estabeleça limites:</strong> aprenda a dizer "não" e se afaste de relações que sugam sua energia.</li>
             <li><strong>Prática de autocuidado diário:</strong> sono de qualidade, alimentação equilibrada, movimento e momentos de descanso.</li>
             <li><strong>Descarte comparações:</strong> cada pessoa tem seu ritmo e sua história; comparar-se é fonte de sofrimento.</li>
             <li><strong>Reconheça e nomeie sentimentos:</strong> não reprima o que sente — sentir é humano, e isso não é fraqueza.</li>
@@ -238,6 +209,55 @@
         </ul>
     </div>
 
+    <!-- 🎥 VÍDEOS RECOMENDADOS — AGORA EMBAIXO! -->
+    <h2>📺 Vídeos Recomendados</h2>
+    <div class="grid-videos">
+        <!-- Vídeo 1 -->
+        <div class="video-card">
+            <h3>✨ Dicas de Beleza e Autocuidado — Glow Up</h3>
+            <p>Com dicas práticas e simples de cuidados com unhas, cabelo, pele, lábios e hábitos de beleza que elevam a autoestima sem esforço excessivo. Um guia completo de cuidados diários!</p>
+            <div class="video-link">
+                <a href="https://youtu.be/nIekwODLiQM?si=olW_wRJPErBNPN0i" target="_blank">▶️ Assistir no YouTube</a>
+            </div>
+        </div>
+
+        <!-- Vídeo 2 -->
+        <div class="video-card">
+            <h3>🎀 Hábitos de Beleza que Mudaram Minha Vida</h3>
+            <p>Hábitos simples de rotina que fazem toda a diferença na pele, no cabelo e na autoimagem. Pequenas mudanças que transformam a relação com o próprio corpo e com a estética.</p>
+            <div class="video-link">
+                <a href="https://youtu.be/XPpxC2D39vw?si=USKJHUW7Qf9NCdMi" target="_blank">▶️ Assistir no YouTube</a>
+            </div>
+        </div>
+
+        <!-- Vídeo 3 -->
+        <div class="video-card">
+            <h3>💭 Pressão Estética e Saúde Mental</h3>
+            <p>Reflexão importante sobre o mito do "corpo ideal" e como a busca por padrões inatingíveis afeta nossa saúde física e emocional. Um convite ao equilíbrio e à aceitação de si mesmo.</p>
+            <div class="video-link">
+                <a href="https://youtu.be/01Mu8MgUfO8?si=PNIcgQT95RFUNQrz" target="_blank">▶️ Assistir no YouTube</a>
+            </div>
+        </div>
+
+        <!-- Vídeo 4 -->
+        <div class="video-card">
+            <h3>⚡ Hábitos para Mais Energia e Bem-Estar</h3>
+            <p>Rotinas e hábitos que ajudam a combater o cansaço, a preguiça e a desmotivação. Cuidar de si também é ter energia para viver — autocuidado que fortalece corpo e mente.</p>
+            <div class="video-link">
+                <a href="https://youtu.be/v36ugYYYzh0?si=INmMz59QrbYMietf" target="_blank">▶️ Assistir no YouTube</a>
+            </div>
+        </div>
+
+        <!-- Vídeo 5 -->
+        <div class="video-card">
+            <h3>🧠 Construindo Autoestima Verdadeira</h3>
+            <p>Psicologia prática: o que realmente constrói uma autoestima saudável — para além da aparência e das conquistas. Como valorizar-se de forma genuína e duradoura.</p>
+            <div class="video-link">
+                <a href="https://youtu.be/R6uMbRW3Vzc?si=_BYvgxdAoyy9yCjj" target="_blank">▶️ Assistir no YouTube</a>
+            </div>
+        </div>
+    </div>
+
     <!-- 💜 Destaque Final -->
     <div class="destaque-final">
         <h3>✨ Lembre-se sempre:</h3>
@@ -246,4 +266,5 @@
 
 </body>
 </html>
-
+    
+     
