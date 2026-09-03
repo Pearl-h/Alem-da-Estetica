@@ -1,43 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Além da Estetica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo — História da Estética</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Georgia, serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff9f0, #fef7f0);
+            color: #5a3e36;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b5d33;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #705040;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dashed #e0c9b0;
+        }
+
+        .frase-destaque {
+            background: linear-gradient(135deg, #ffe4e1, #fef0d9);
+            border-left: 5px solid #e89a6d;
+            padding: 1.5rem;
+            border-radius: 16px;
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: 500;
+            color: #6b3f2d;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(139, 90, 50, 0.1);
+        }
+
+        .eras-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .era-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 16px rgba(139, 90, 50, 0.12);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .era-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .era-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #5c3c24;
+        }
+
+        /* Cores pastéis diferentes pra cada quadrinho */
+        .pre { border-color: #d4a373; background: #fffbf5; }
+        .egito { border-color: #e6a858; background: #fff9ed; }
+        .grecia { border-color: #8fb3d9; background: #f0f6fc; }
+        .media { border-color: #b8a9c9; background: #f7f4fb; }
+        .renascimento { border-color: #e87a90; background: #fef2f5; }
+        .xx { border-color: #f4a261; background: #fff7ee; }
+        .atual { border-color: #60a5fa; background: #eff6ff; }
+
+        .conclusao {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(139, 90, 50, 0.1);
+            font-size: 1.05rem;
+            color: #5a3e36;
+            line-height: 1.8;
+        }
+
+        .conclusao p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
 <body>
-    
-  <header>
-    <nav>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="historia.html">História</a></li>
-            <li><a href="conteudos.html">Conteúdos</a><li>
-            <li><a href="contatos.html">Contatos</a></li>
-  </nav>
-  </header>
 
-  <div class="timeline-container">
-    <div class="timeline-line"></div>
+    <h1>📜 Linha do Tempo da Estética</h1>
 
-    <div class="timeline-items">
+    <p class="intro">Uma linha do tempo da estética é um resumo cronológico de como os padrões de beleza e os cuidados pessoais mudaram na história.</p>
 
-      <div class="timeline-item">
-        <div class="badge badge-top bg-blue">
-          <i class="fa-solid fa-gem"></i>
-      <div>
-        <button class="node"
-          data-year="1920"
-          data-title="Anos 1920 - A Era dos Vestidos Melindrosos"
-          data-img="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80"
-          data-text="A década de 1920 trouxe uma revolução na moda feminina. Os corsets foram abandonados em favor de silhuetas retas, cinturas baixas e saias mais curtas que facilitavam a dança ao som do Jazz.">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="text-block text-block-bottom">
-          <div class="year">1920</div>
-          <div class="description">A revolução dos anos 20 com silhueta reta e vestidos melindrosos.</div>
+    <div class="frase-destaque">
+        "Padrão de beleza não é regra, é época! ⏳✨"
+    </div>
+
+    <h2 style="text-align:center; color:#8b5d33; margin-bottom:2rem;">📖 Resumo das Eras</h2>
+
+    <div class="eras-container">
+        <div class="era-card pre">
+            <h3>🌍 Pré-História</h3>
+            <p>Corpos robustos, focados na fertilidade e força.</p>
         </div>
-      </div>
 
-      <footer>
-        <p>© 2026 - Projeto Impactos da Estética na Saúde Mental</p>
-    </footer>
-</body>
+        <div class="era-card egito">
+            <h3>🏺 Egito Antigo</h3>
+            <p>Higiene, simetria e olhos marcados com kohl.</p>
+        </div>
+
+        <div class="era-card grecia">
+            <h3>🏛️ Grécia Antiga</h3>
+            <p>Proporções matemáticas e corpos a…
+
+
+      
+      
