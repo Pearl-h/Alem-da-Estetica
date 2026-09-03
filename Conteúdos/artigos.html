@@ -1,38 +1,239 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artigos</title>
-  <link rel="stylesheet" href="pasta.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética e Saúde Mental — Via Dupla</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Georgia, serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff9f0, #fef7f0);
+            color: #5a3e36;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b5d33;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #705040;
+            max-width: 850px;
+            margin: 0 auto 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dashed #e0c9b0;
+        }
+
+        .container-dupla {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .container-dupla {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .coluna {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .coluna h2 {
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 16px;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .positivo h2 {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+        }
+
+        .negativo h2 {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.4rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .positivo .card {
+            border-color: #5cb85c;
+            background: #f8fef9;
+        }
+
+        .negativo .card {
+            border-color: #d9534f;
+            background: #fef8f8;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #5a4a42;
+        }
+
+        .consenso {
+            background: linear-gradient(135deg, #e9ecef, #dee2e6);
+            padding: 1.8rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid #6c757d;
+        }
+
+        .consenso h3 {
+            color: #495057;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .referencias {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .referencias h3 {
+            color: #8b5d33;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .referencias ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .referencias li a {
+            color: #a67c52;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .referencias li a:hover {
+            color: #8b5d33;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../conteudos.html">Conteúdos</a>
-      <a href="../contatos.html">Contatos</a>
-    </div>
-  </header>
-  
-  <section class="banner">
-    <div class="banner-content">
-      <h1>Últimos Artigos</h1>
-      <p>Acompanhe as notícias mais recentes</p>
-    </div>
- </section>
+    <h1>⚖️ Estética e Saúde Mental — Uma Via Dupla</h1>
 
-  <main class="articles-grid">
+    <p class="intro">Os artigos e notícias apontam que a estética e a saúde mental possuem uma relação de via dupla: com benefícios claros e riscos severos. Conheça os dois lados:</p>
 
-  <articles class="card">
-  <img clas="card-image" scr="" alt=
-    <div class="card-content">
-    <h2 class="card-title"></h2>
-  
-  <footer>
-    <p>&copy; Projeto  Acadêmico - Além da Estética 2026.</p>
-  </footer>
-  
+    <div class="container-dupla">
+        <!-- 🟢 LADO POSITIVO -->
+        <div class="coluna positivo">
+            <h2>💚 Vantagens e Benefícios</h2>
+
+            <div class="card">
+                <h3>✨ Aumento da Autoestima</h3>
+                <p>Sentir-se satisfeito com a própria imagem traz mais confiança para as relações diárias e profissionais, melhorando a aceitação do próprio corpo.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧘 Redução do Estresse</h3>
+                <p>Práticas de autocuidado — como massagens, rotinas de pele e cuidados pessoais — funcionam como momentos de pausa e relaxamento mental, reduzindo a tensão.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤍 Estímulo ao Autocuidado</h3>
+                <p>O tempo dedicado a si mesmo reforça hábitos positivos de saúde geral e equilíbrio emocional, promovendo bem-estar integral.</p>
+            </div>
+
+            <div class="card">
+                <h3>👥 Impacto Social Positivo</h3>
+                <p>A melhora na autoimagem reflete positivamente nas relações interpessoais e no ambiente de trabalho.</p>
+            </div>
+        </div>
+
+        <!-- 🔴 LADO NEGATIVO -->
+        <div class="coluna negativo">
+            <h2>⚠️ Riscos e Impactos Negativos</h2>
+
+            <div class="card">
+                <h3>📱 Pressão Estética e Padrões Irreais</h3>
+                <p>Redes sociais, filtros e edições criam padrões de beleza inatingíveis. A busca obsessiva por esses ideais pode gerar ansiedade, frustração e culpa.</p>
+            </div>
+
+            <div class="card">
+                <h3>💔 Gatilhos Psicológicos</h3>
+                <p>A comparação constante com corpos idealizados aumenta a insatisfação corporal, a autocrítica e pode levar à depressão e baixa autoestima.</p>
+            </div>
+
+            <div class="card">
+                <h3>🪞 Transtornos de Imagem</h3>
+                <p>A insatisfação crônica com o corpo pode evoluir para quadros graves, como o Transtorno Dismórfico Corporal — uma obsessão por defeitos imaginários.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚖️ Comportamentos Prejudiciais</h3>
+                <p>A busca por resultados rápidos pode levar a dietas restritivas, culpa nas refeições e práticas inadequadas de exercício físico.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 CONSENSO -->
+    <div class="consenso">
+        <h3>🤝 Consenso dos Especialistas</h3>
+        <p>Os especialistas defendem o <strong>equilíbrio</strong>. Os procedimentos e o autocuidado devem focar no <strong>bem-estar individual</strong>, e não na tentativa de se encaixar em padrões sociais que prejudicam a mente. Beleza não é regra — é expressão!</p>
+    </div>
+
+    <!-- 📚 REFERÊNCIAS -->
+    <div class="referencias">
+        <h3>📚 Fontes e Artigos Consultados</h3>
+        <ul>
+            <li>📄 <a href="https://g1.globo.com/google/amp/pr/parana/especial-publicitario/faculdades-pequeno-principe-transformando-conhecimento-em-saude/noticia/2025/08/11/estetica-alem-da-aparencia-como-o-autocuidado-impacta-a-saude-emocional.ghtml" target="_blank">G1 — Estética além da aparência: como o autocuidado impacta a saúde emocional</a></li>
+            <li>📄 <a href="https://share.google/VHZQUVimPa9uThvtq" target="_blank">Revista Malu — Corpo perfeito: o impacto da busca estética na saúde mental</a></li>
+            <li>📄 <a href="https://share.google/EoHHmZeM30eq7Zxw6" target="_blank">Material de apoio — Estética e Saúde Mental</a></li>
+        </ul>
+    </div>
+
 </body>
 </html>
+     
