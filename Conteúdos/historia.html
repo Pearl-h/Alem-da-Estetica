@@ -16,7 +16,7 @@
             background: linear-gradient(135deg, #fff9f0, #fef7f0);
             color: #5a3e36;
             line-height: 1.6;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -24,7 +24,7 @@
         h1 {
             text-align: center;
             color: #8b5d33;
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -33,7 +33,7 @@
             font-size: 1.1rem;
             color: #705040;
             max-width: 800px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
             padding-bottom: 1.5rem;
             border-bottom: 2px dashed #e0c9b0;
         }
@@ -41,43 +41,72 @@
         .frase-destaque {
             background: linear-gradient(135deg, #ffe4e1, #fef0d9);
             border-left: 5px solid #e89a6d;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 16px;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             text-align: center;
             font-weight: 500;
             color: #6b3f2d;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             box-shadow: 0 4px 12px rgba(139, 90, 50, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #8b5d33;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
         .eras-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
             margin-bottom: 3rem;
+        }
+
+        @media (min-width: 600px) {
+            .eras-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .eras-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .era-card {
             background: #fff;
-            padding: 1.5rem;
+            padding: 1.3rem;
             border-radius: 20px;
-            box-shadow: 0 6px 16px rgba(139, 90, 50, 0.12);
+            box-shadow: 0 4px 12px rgba(139, 90, 50, 0.1);
             border-left: 5px solid;
             transition: transform 0.3s ease;
+            min-height: 120px;
         }
 
         .era-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .era-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
             color: #5c3c24;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        /* Cores pastéis diferentes pra cada quadrinho */
+        .era-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #6b5344;
+        }
+
+        /* Cores das bordas */
         .pre { border-color: #d4a373; background: #fffbf5; }
         .egito { border-color: #e6a858; background: #fff9ed; }
         .grecia { border-color: #8fb3d9; background: #f0f6fc; }
@@ -88,10 +117,10 @@
 
         .conclusao {
             background: #fff;
-            padding: 2rem;
+            padding: 1.8rem;
             border-radius: 20px;
             box-shadow: 0 6px 20px rgba(139, 90, 50, 0.1);
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #5a3e36;
             line-height: 1.8;
         }
@@ -111,7 +140,7 @@
         "Padrão de beleza não é regra, é época! ⏳✨"
     </div>
 
-    <h2 style="text-align:center; color:#8b5d33; margin-bottom:2rem;">📖 Resumo das Eras</h2>
+    <h2>📖 Resumo das Eras</h2>
 
     <div class="eras-container">
         <div class="era-card pre">
@@ -158,6 +187,8 @@
 </body>
 </html>
 
+       
 
-      
+       
+           
       
