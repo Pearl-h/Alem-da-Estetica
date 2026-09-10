@@ -280,7 +280,7 @@ function enviarDadosParaOGoogleSheets(dados) {
     body: JSON.stringify(dados)
   })
   .then(() => {
-    console.log("Dados salvos com sucesso na planilha TCC - Dados!: ", dados);
+    console.log(dados);
   })
   .catch((error) => {
     console.error("Erro ao enviar dados:", error);
@@ -311,7 +311,7 @@ function showResult() {
     };
 
     enviarDadosParaOGoogleSheets(payload);
-
+     console.log(payload)
     quizContainer.innerHTML = `
         <h2>Quiz Concluído!</h2>
         <p>${finalResult}</p>
