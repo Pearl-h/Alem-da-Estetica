@@ -204,8 +204,8 @@ const questions = [
 
 let respostasDetalhadas = [];
 let dadosUsuario = {
-    faixaEtaria: "",
-    genero: ""
+    faixaEtaria: "30",
+    genero: "Masculino"
 };
 
 let currentQuestionIndex = 0;
