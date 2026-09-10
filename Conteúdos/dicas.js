@@ -6,7 +6,7 @@ const dicas = [
   },
   {
     titulo: "Chá para Alívio de Cólicas",
-    imagem: "../img/Xicara.png",
+    imagem: "../img/Chas.jpg",
     descricao: "Camomila + erva-doce + gengibre. Ferva a água, desligue, infusione 5–7 min. Tome morno! Acalma, relaxa músculos e reduz inchaço."
   },
   {
@@ -16,7 +16,7 @@ const dicas = [
   },
   {
     titulo: "Pele Oleosa: Máscara de Argila Verde",
-    imagem: "../img/Espinhas.jpg",
+    imagem: "../img/Espelho.jpe",
     descricao: "1 colher de sopa de argila verde + água = pasta. Aplique, evite olhos e boca. Deixe 10–15 min. Enxágue com água morna. Use 1x por semana."
   },
   {
@@ -36,7 +36,7 @@ const dicas = [
   },
   {
     titulo: "Prevenindo Espinhas",
-    imagem: "../img/Espelho.jpe",
+    imagem: "../img/Espinhas.jpg",
     descricao: "Beba água | Esfolie suavemente | Não durma de maquiagem | Alimente-se bem | Não toque o rosto | Controle o estresse 💆‍♀️"
   },
   {
@@ -51,7 +51,7 @@ const dicas = [
   },
   {
     titulo: "Dia de Princesa: Rotina Completa",
-    imagem: "../img/Chas.jpg",
+    imagem: "../img/Princesa.jpg",
     descricao: "Cabelo hidratado ✨ Pele hidratada 💧 Frutas e comidinhas leves 🍓 Unhas bem cuidadas 💅 Tempo para relaxar 🤍 Você merece!"
   }
 ];
