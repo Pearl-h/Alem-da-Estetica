@@ -273,15 +273,15 @@ const TCC_Dados = 'https://script.google.com/macros/s/AKfycbxm36eY9XsNFdI-siWyNl
 function enviarDadosParaOGoogleSheets(dados) {
   fetch(TCC_Dados, {
     method: 'POST',
-    mode: 'no-cors',
     headers: {
-      'Content-Type': 'text/plain;charset=utf-8'
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(dados)
   })
-  .then(() => {
-    console.log(dados);
-  })
+.then(response => response.json())
+.then(result => {
+  console.log("Resposta do Apps Script:", result);
+})
   .catch((error) => {
     console.error("Erro ao enviar dados:", error);
   });
