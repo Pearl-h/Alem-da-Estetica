@@ -43,7 +43,9 @@ function carregarArtigos() {
     <p style="color: #5a4b6a; line-height: 1.7;">A relação entre estética e saúde mental é complexa: vai desde a pressão social na autoimagem até os efeitos dos procedimentos.</p>
     <p style="color: #5a4b6a;"><strong>📌 Pressão:</strong> Padrões irreais → insatisfação, ansiedade e depressão. Mulheres e jovens são os mais afetados.</p>
     <p style="color: #5a4b6a;"><strong>✨ Procedimentos:</strong> Podem elevar a autoestima, mas sem acompanhamento podem esconder sofrimentos. Avaliação psicológica é essencial!</p>
-  `;
+  `<img src="../img/Passaro.png" alt="Pássaro" style="max-width: 220px; width: 100%; border-radius: 16px;">
+    <p style="color: #9370db; margin-top: 12px; font-style: italic;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
+    ;
   container.appendChild(intro);
 
   // CAIXAS DE LINKS
