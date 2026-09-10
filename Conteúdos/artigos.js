@@ -31,21 +31,28 @@ function carregarArtigos() {
   if (!container) return;
   container.innerHTML = "";
 
-  // TEXTO INTRODUTÓRIO
+  // ✨ TEXTO + IMAGEM PÁSSARO — MESMO QUADRO
   const intro = document.createElement('div');
   intro.style.background = '#fff0f5';
-  intro.style.padding = '25px';
+  intro.style.padding = '30px';
   intro.style.borderRadius = '20px';
   intro.style.marginBottom = '30px';
   intro.style.border = '2px solid #f8d7da';
   intro.innerHTML = `
     <h2 style="color: #b48ead; text-align: center; margin-top: 0;">✨ Estética e Saúde Mental ✨</h2>
+    
     <p style="color: #5a4b6a; line-height: 1.7;">A relação entre estética e saúde mental é complexa: vai desde a pressão social na autoimagem até os efeitos dos procedimentos.</p>
+    
     <p style="color: #5a4b6a;"><strong>📌 Pressão:</strong> Padrões irreais → insatisfação, ansiedade e depressão. Mulheres e jovens são os mais afetados.</p>
+    
     <p style="color: #5a4b6a;"><strong>✨ Procedimentos:</strong> Podem elevar a autoestima, mas sem acompanhamento podem esconder sofrimentos. Avaliação psicológica é essencial!</p>
-  `<img src="../img/Passaro.png" alt="Pássaro" style="max-width: 220px; width: 100%; border-radius: 16px;">
-    <p style="color: #9370db; margin-top: 12px; font-style: italic;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
-    ;
+    
+    <!-- 🐦 IMAGEM DENTRO DO MESMO QUADRO -->
+    <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px dashed #e8c8d0;">
+      <img src="../img/Passaro.png" alt="Pássaro" style="max-width: 180px; width: 100%; border-radius: 16px;">
+      <p style="color: #9370db; margin-top: 10px; font-style: italic; margin-bottom: 0;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
+    </div>
+  `;
   container.appendChild(intro);
 
   // CAIXAS DE LINKS
@@ -73,21 +80,6 @@ function carregarArtigos() {
     caixaLinks.appendChild(cartao);
   });
   container.appendChild(caixaLinks);
-
-  // 🐦 IMAGEM PÁSSARO — no final
-  const blocoPassaro = document.createElement('div');
-  blocoPassaro.style.textAlign = 'center';
-  blocoPassaro.style.marginTop = '35px';
-  blocoPassaro.style.padding = '25px';
-  blocoPassaro.style.background = '#f9f5f2';
-  blocoPassaro.style.borderRadius = '20px';
-  blocoPassaro.style.border = '2px solid #e6e6fa';
-  blocoPassaro.innerHTML = `
-    <img src="../img/Passaro.png" alt="Pássaro" style="max-width: 220px; width: 100%; border-radius: 16px;">
-    <p style="color: #9370db; margin-top: 12px; font-style: italic;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
-  `;
-  container.appendChild(blocoPassaro);
 }
 
 document.addEventListener('DOMContentLoaded', carregarArtigos);
-   
