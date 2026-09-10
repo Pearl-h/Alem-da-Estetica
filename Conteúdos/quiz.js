@@ -204,8 +204,8 @@ const questions = [
 
 let respostasDetalhadas = [];
 let dadosUsuario = {
-    faixaEtaria: "30",
-    genero: "Masculino"
+    faixaEtaria: "",
+    genero: ""
 };
 
 let currentQuestionIndex = 0;
@@ -221,7 +221,9 @@ const submitButton = document.getElementById("submit");
 const quizContainer = document.getElementById("quiz");
 
 if (submitButton) submitButton.style.display = "none";
-
+submitButton.onclick(){
+    alert(dadosUsuario)
+}
 function startQuiz() {
     startScreen.style.display = "none";
     quizScreen.style.display = "block";
