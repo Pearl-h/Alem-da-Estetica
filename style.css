@@ -23,7 +23,7 @@ header {
   z-index: 100;
 
   .logo-img img {
-  max-height: 50px;
+  max-height: 20px;
   width: auto;
   display: block;
 }
