@@ -2,46 +2,33 @@ const artigos = [
   {
     titulo: "Corpo perfeito: o impacto da busca estética na saúde mental",
     categoria: "Tecnologia & Saúde",
-    descricao: "",
-    imagem: "../img/Flor.png",
     link: "https://share.google/B6C2CEw7jfkHeVCiN"
   },
   {
     titulo: "Transtornos Psiquiátricos na Medicina Estética",
     categoria: "Saúde Mental",
-    descricao: "Sinais de alerta que profissionais devem reconhecer em pacientes.",
-    imagem: "../img/Flor.png",
     link: "https://share.google/PXtHZZkEOIZpVS25a"
   },
   {
     titulo: "A Influência dos Procedimentos Estéticos na Saúde Mental",
     categoria: "Pesquisa",
-    descricao: "Análise dos benefícios e riscos da estética para a mente.",
-    imagem: "../img/Flor.png",
     link: "https://revista.fumec.br/index.php/esteticaemmovimento/article/view/9808"
   },
   {
     titulo: "Pressão Estética e Saúde Mental — Drauzio Varella",
     categoria: "Divulgação",
-    descricao: "Como a cobrança de aparência afeta nossa saúde mental.",
-    imagem: "../img/Flor.png",
     link: "https://drauziovarella.uol.com.br/psiquiatria/pressao-estetica-pode-afetar-a-saude-mental/"
   },
   {
     titulo: "Pressão Estética: Como Lidar — Psicólogos SP",
     categoria: "Prática",
-    descricao: "Estratégias para proteger sua autoestima.",
-    imagem: "../img/Flor.png",
     link: "https://www.psicologossaopaulo.com.br/blog/pressao-estetica-como-ela-afeta-sua-saude-mental/"
   }
 ];
 
 function carregarArtigos() {
   const container = document.getElementById('cards-container');
-  if (!container) {
-    console.log("⚠️ Não encontrei o espaço #cards-container no HTML!");
-    return;
-  }
+  if (!container) return;
   container.innerHTML = "";
 
   // TEXTO INTRODUTÓRIO
@@ -84,7 +71,8 @@ function carregarArtigos() {
     caixaLinks.appendChild(cartao);
   });
   container.appendChild(caixaLinks);
-/ ✨ IMAGEM PÁSSARO — no final da página
+
+  // 🐦 IMAGEM PÁSSARO — no final
   const blocoPassaro = document.createElement('div');
   blocoPassaro.style.textAlign = 'center';
   blocoPassaro.style.marginTop = '35px';
@@ -97,5 +85,7 @@ function carregarArtigos() {
     <p style="color: #9370db; margin-top: 12px; font-style: italic;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
   `;
   container.appendChild(blocoPassaro);
+}
 
 document.addEventListener('DOMContentLoaded', carregarArtigos);
+   
