@@ -271,6 +271,12 @@ function selectOption(question, option) {
 const TCC_Dados = 'https://script.google.com/macros/s/AKfycbxm36eY9XsNFdI-siWyNl_CKLvhh6iGbd-DEaUc3BEcY66WJlfIY2OuXBzHhG60s4-GnQ/exec';
 
 function enviarDadosParaOGoogleSheets(dados) {
+
+  console.log("DADOS ANTES DO ENVIO:");
+  console.log(dados);
+  console.log("faixaEtaria ANTES DO ENVIO:", dados.faixaEtaria);
+  console.log("JSON ENVIADO:", JSON.stringify(dados));
+
   fetch(TCC_Dados, {
     method: 'POST',
     headers: {
@@ -278,11 +284,14 @@ function enviarDadosParaOGoogleSheets(dados) {
     },
     body: JSON.stringify(dados)
   })
-.then(response => response.json())
-.then(result => {
-  console.log("Resposta do Apps Script:", result);
-})
-  .catch((error) => {
+  .then(response => {
+    console.log("Status HTTP:", response.status);
+    return response.text();
+  })
+  .then(result => {
+    console.log("Resposta do Apps Script:", result);
+  })
+  .catch(error => {
     console.error("Erro ao enviar dados:", error);
   });
 }
