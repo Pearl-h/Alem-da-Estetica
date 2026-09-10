@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História</title>
+  <link rel="stylesheet" href="pasta.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-links">
+      <a href="/index.html">Início</a>
+      <a href="/historia.html">História</a>
+      <a href="/conteudos.html">Conteúdos</a>
+      <a href="/contatos.html">Contatos</a>
+    </div>
+  </header>
+
+<div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-items">
+
+      <div class="timeline-item">
+        <div class="badge badge-top bg-blue">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+
+        <button class="node" 
+                data-year="1920" 
+                data-title="Anos 1920 - A Era dos Vestidos Melindrosos"
+                data-img="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80"
+                data-text="A década de 1920 trouxe uma revolução na moda feminina. Os corsets foram abandonados em favor de silhuetas retas, cinturas baixas e saias mais curtas que facilitavam a dança ao som do Jazz.">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="text-block text-block-bottom">
+          <div class="year">1920</div>
+          <div class="description">A revolução dos anos 20 com silhueta reta e vestidos melindrosos.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="text-block text-block-top">
+          <div class="description">Surgimento do "New Look" de Dior e a volta da elegância pós-guerra.</div>
+          <div class="year">1950</div>
+        </div>
+
+        <button class="node" 
+                data-year="1950" 
+                data-title="Anos 1950 - O New Look e a Elegância Clássica"
+                data-img="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+                data-text="Após a Segunda Guerra Mundial, Christian Dior apresentou o 'New Look': saias rodadas e volumosas, cintura bem marcada e um retorno ao glamour e sofisticação extrema.">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="badge badge-bottom bg-cyan">
+          <i class="fa-solid fa-glasses"></i>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="badge badge-top bg-yellow">
+          <i class="fa-solid fa-shirt"></i>
+        </div>
+
+        <button class="node" 
+                data-year="1970" 
+                data-title="Anos 1970 - A Era Disco e o Estilo Hippie"
+                data-img="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+                data-text="Os anos 70 foram marcados pela liberdade de expressão. Calças boca de sino, estampas psicodélicas, tecidos brilhantes da era Disco e o visual natural dos Hippies dominaram as ruas.">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="text-block text-block-bottom">
+          <div class="year">1970</div>
+          <div class="description">A era Disco traz o estilo Hippie, calças boca de sino e cores vibrantes.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="text-block text-block-top">
+          <div class="description">Cultura das passarelas, supermodelos e a popularização do Jeans.</div>
+          <div class="year">1990</div>
+        </div>
+
+        <button class="node" 
+                data-year="1990" 
+                data-title="Anos 1990 - Minimalismo, Grunge e o Jeans"
+                data-img="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
+                data-text="Marcada pelas Supermodelos e pelo estilo Grunge, a moda dos anos 90 priorizou o conforto com calças jeans largas, xadrez, camisetas simples e a ascensão do 'streetwear'.">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="badge badge-bottom bg-orange">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="badge badge-top bg-pink">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <button class="node" 
+                data-year="2020" 
+                data-title="Anos 2020 - Moda Sustentável e Tecnologia"
+                data-img="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"
+                data-text="A moda atual busca a consciência ambiental, brechós e reaproveitamento. Ao mesmo tempo, é influenciada pelas redes sociais (TikTok) e pelo vestuário confortável pós-pandemia.">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="text-block text-block-bottom">
+          <div class="year">2020</div>
+          <div class="description">Moda sustentável, e-commerce e ascensão do Fast & Slow Fashion.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="Foto da época">
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script>
+    const nodes = document.querySelectorAll('.node');
+    const modal = document.getElementById('modal');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        modalImg.src = node.getAttribute('data-img');
+        modalTitle.textContent = node.getAttribute('data-title');
+        modalText.textContent = node.getAttribute('data-text');
+        
+        modal.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
