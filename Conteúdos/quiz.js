@@ -221,9 +221,7 @@ const submitButton = document.getElementById("submit");
 const quizContainer = document.getElementById("quiz");
 
 if (submitButton) submitButton.style.display = "none";
-submitButton.onclick(){
-    alert(dadosUsuario)
-}
+
 function startQuiz() {
     startScreen.style.display = "none";
     quizScreen.style.display = "block";
@@ -282,7 +280,7 @@ function enviarDadosParaOGoogleSheets(dados) {
     body: JSON.stringify(dados)
   })
   .then(() => {
-    console.log("Dados salvos com sucesso na planilha TCC - Dados!");
+    console.log("Dados salvos com sucesso na planilha TCC - Dados!: ", dados);
   })
   .catch((error) => {
     console.error("Erro ao enviar dados:", error);
