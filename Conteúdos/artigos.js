@@ -84,6 +84,18 @@ function carregarArtigos() {
     caixaLinks.appendChild(cartao);
   });
   container.appendChild(caixaLinks);
-}
+/ ✨ IMAGEM PÁSSARO — no final da página
+  const blocoPassaro = document.createElement('div');
+  blocoPassaro.style.textAlign = 'center';
+  blocoPassaro.style.marginTop = '35px';
+  blocoPassaro.style.padding = '25px';
+  blocoPassaro.style.background = '#f9f5f2';
+  blocoPassaro.style.borderRadius = '20px';
+  blocoPassaro.style.border = '2px solid #e6e6fa';
+  blocoPassaro.innerHTML = `
+    <img src="../img/Passaro.png" alt="Pássaro" style="max-width: 220px; width: 100%; border-radius: 16px;">
+    <p style="color: #9370db; margin-top: 12px; font-style: italic;">"Assim como o pássaro, sua mente merece liberdade e carinho" 💛</p>
+  `;
+  container.appendChild(blocoPassaro);
 
 document.addEventListener('DOMContentLoaded', carregarArtigos);
