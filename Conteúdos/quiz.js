@@ -1,6 +1,6 @@
 const questions = [
 {
-    id: "FaixaEtaria",
+    id: "faixaEtaria",
     question: "1. Qual a sua faixa etária de idade?",
     options: [
         { text: "+10 anos"},
@@ -255,7 +255,7 @@ function loadQuestion() {
 }
 
 function selectOption(question, option) {
-    if (question.id === "FaixaEtaria") {
+    if (question.id === "faixaEtaria") {
         dadosUsuario.faixaEtaria = option.text;
     }
     else if (question.id === "genero") {
@@ -263,7 +263,7 @@ function selectOption(question, option) {
     }
     else {
         respostasDetalhadas.push(option.points);
-        totalScore += option.points; // Soma a pontuação apenas se for pergunta do quiz
+        totalScore += (option.points || 0);
     }
 
     currentQuestionIndex++;
