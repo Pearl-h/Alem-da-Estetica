@@ -3,21 +3,21 @@ const questions = [
     id: "FaixaEtaria",
     question: "1. Qual a sua faixa etária de idade?",
     options: [
-        { text: "+10 anos", points: 0 },
-        { text: "+18 anos", points: 0 },
-        { text: "+25 anos", points: 0 },
-        { text: "+35 anos", points: 0 },
-        { text: "+40 anos", points: 0 }
+        { text: "+10 anos"},
+        { text: "+18 anos"},
+        { text: "+25 anos"},
+        { text: "+35 anos"},
+        { text: "+40 anos"}
     ]
 },
 {
     id: "genero",
     question: "2. Qual o seu gênero?",
     options: [
-        { text: "Masculino", points: 0 },
-        { text: "Feminino", points: 0 },
-        { text: "Outro", points: 0 },
-        { text: "Prefiro não responder", points: 0 }
+        { text: "Masculino"},
+        { text: "Feminino"},
+        { text: "Outro"},
+        { text: "Prefiro não responder"}
     ]
 },
 {
@@ -257,13 +257,15 @@ function loadQuestion() {
 function selectOption(question, option) {
     if (question.id === "FaixaEtaria") {
         dadosUsuario.faixaEtaria = option.text;
-    } else if (question.id === "genero") {
+    }
+    else if (question.id === "genero") {
         dadosUsuario.genero = option.text;
-    } else {
+    }
+    else {
         respostasDetalhadas.push(option.points);
+        totalScore += option.points; // Soma a pontuação apenas se for pergunta do quiz
     }
 
-    totalScore += option.points;
     currentQuestionIndex++;
     loadQuestion();
 }
