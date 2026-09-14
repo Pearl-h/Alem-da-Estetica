@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História</title>
+  <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-links">
+      <a href="/index.html">Início</a>
+      <a href="/historia.html">História</a>
+      <a href="/conteudos.html">Conteúdos</a>
+      <a href="/contatos.html">Contatos</a>
+    </div>
+  </header>
+
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+
+  <div class="timeline-items">
+    <div class="timeline-item">
+      <div class="badge badge-top bg-blue">
+        <span class="emoji">🌍</span>
+      </div>
+      <button class="node"
+              data-id="1"
+              data-tag="Final do séc. XIX"
+              data-year="1900"
+              data-title="Nascimento da Alta-Costura e Belle Époque"
+              data-img="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+              data-text="A silhueta em 'S' e os espartilhos ornamentados definiram a opulência da aristocracia europeia antes de o mundo ruir com a guerra. A estética da época refletia a busca por status e refinamento, com ênfase em tecidos luxuosos e detalhes elaborados.">
+        +
+      </button>
+      <div class="text-block text-block-bottom">
+        <div class="year">Final do séc. XIX</div>
+        <div class="description">Belle Époque e luxo aristocrático</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="text-block text-block-top">
+        <div class="description">Liberdade e conforto no pós-guerra</div>
+        <div class="year">Anos 1920</div>
+      </div>
+      <button class="node"
+              data-id="2"
+              data-tag="Anos 1920"
+              data-year="1920"
+              data-title="Os Anos Loucos e a Era do Jazz"
+              data-img="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7VdvliIsYDYQl_0VCLXBcSitnv31e82lhJLPSjuY1ZHik1ogj-MaXaXlL6oNFDZJeVk2sG7gj87tGjtV6XY8RREF5Xq3FP3Ns0FAL1i7yru1q__q26Mf2cLhUE9GzVi2DdbW-7rvS514/s320/Normatalmadge_crop+SM.jpg"
+              data-text="Coco Chanel popularizou o conforto, as calças femininas e o 'pretinho básico', refletindo a nova liberdade pós-Primeira Guerra. Mulheres abandonaram os espartilhos tradicionais, adotando cabelos curtos (bob cut) e vestidos retos de cintura baixa.">
+        +
+      </button>
+      <div class="badge badge-bottom bg-cyan">
+        <span class="emoji">🎵</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="badge badge-top bg-yellow">
+        <span class="emoji">🎬</span>
+      </div>
+      <button class="node"
+              data-id="3"
+              data-tag="1947"
+              data-year="1947"
+              data-title="O 'New Look' de Christian Dior"
+              data-img="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+              data-text="Lançado logo após as restrições de tecido da Segunda Guerra Mundial, o estilo trouxe cinturas bem marcadas e saias volumosas. Devolveu o glamour e o luxo à moda parisiense, consolidando Paris como o centro global da indústria fashion.">
+        +
+      </button>
+      <div class="text-block text-block-bottom">
+        <div class="year">1947</div>
+        <div class="description">New Look e glamour parisiense</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="text-block text-block-top">
+        <div class="description">Minissaia e juventude futurista</div>
+        <div class="year">1960</div>
+      </div>
+      <button class="node"
+              data-id="4"
+              data-tag="1960"
+              data-year="1960"
+              data-title="A Revolução dos Anos"
+              data-img="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80"
+              data-text="Surgimento da minissaia com Mary Quant e a democratização da moda jovem e futurista, como os vestidos metálicos de Paco Rabanne. A rua passou a ditar tendências pela primeira vez, quebrando o elitismo da alta-costura tradicional.">
+        +
+      </button>
+      <div class="badge badge-bottom bg-orange">
+        <span class="emoji">💃</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="badge badge-top bg-pink">
+        <span class="emoji">📸</span>
+      </div>
+      <button class="node"
+              data-id="5"
+              data-tag="1970"
+              data-year="1970"
+              data-title="Contracultura, Hippie e Punk"
+              data-img="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"
+              data-text="Coexistência de estilos contestadores, desde o visual fluido e artesanal do movimento hippie até o niilismo e o DIY (faça você mesmo) do punk. A roupa virou um manifesto político explícito de identidade, diversidade e ruptura com padrões conservadores.">
+        +
+      </button>
+      <div class="text-block text-block-bottom">
+        <div class="year">1970</div>
+        <div class="description">Contracultura, punk e identidade</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalOverlay" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <span id="modalTag" class="modal-tag"></span>
+    <img id="modal-img" src="" alt="Foto da época">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+  const nodes = document.querySelectorAll('.node');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const closeBtn = document.querySelector('.close-btn');
+
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalText = document.getElementById('modalText');
+  const modalTag = document.getElementById('modalTag');
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => {
+      modalImg.src = node.getAttribute('data-img');
+      modalTag.textContent = node.getAttribute('data-tag');
+      modalTitle.textContent = node.getAttribute('data-title');
+      modalText.textContent = node.getAttribute('data-text');
+      modalOverlay.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modalOverlay.classList.remove('active');
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+      modalOverlay.classList.remove('active');
+    }
+  });
+</script>
+
+</body>
+</html>
