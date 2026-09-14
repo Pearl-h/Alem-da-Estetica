@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossário</title>
+  <link rel="stylesheet" href="pasta.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="historia.html">História</a>
+      <a href="conteudos.html">Conteúdos</a>
+      <a href="contatos.html">Contatos</a>
+    </div>
+  </header>
+
+<main class="glossario-container">
+        <div class="glossario-header">
+            <h1>Glossário</h1>
+            <p>Um dicionário da autoestima e da imagem corporal.</p>
+        </div>
+
+        <section class="search-section">
+            <form id="form-busca" onsubmit="return false;">
+                <div class="search-box">
+                    <input 
+                        type="search" 
+                        id="busca" 
+                        placeholder="Digite uma palavra, como autoestima, ansiedade ou aparência..." 
+                    >
+                </div>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <strong>Filtrar por Categoria:</strong>
+            <nav class="filter-nav">
+                <ul>
+                    <li><button data-categoria="todos" class="active">Todos</button></li>
+                    <li><button data-categoria="psicologia">Psicologia</button></li>
+                    <li><button data-categoria="corpo">Corpo</button></li>
+                    <li><button data-categoria="redes-sociais">Redes sociais</button></li>
+                    <li><button data-categoria="estetica">Estética</button></li>
+                    <li><button data-categoria="saude-mental">Saúde mental</button></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="glossario-list">
+            <dl id="lista-glossario">
+            </dl>
+        </section>
+    </main>
+
+    <script src="dicionario.js"></script>
+</body>
+</html>

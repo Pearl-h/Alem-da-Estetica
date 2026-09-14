@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Além da Estética</title>
+  <link rel="stylesheet" href="pasta.css">
+  <!-- CDN do Chart.js para criar os gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>Dashboard de Resultados</h1>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Distribuição por Faixa Etária</h3>
+      <canvas id="chartIdade"></canvas>
+    </div>
+
+    <div class="card">
+      <h3>Perfil de Impacto da Beleza</h3>
+      <canvas id="chartImpacto"></canvas>
+    </div>
+
+    <div class="card card-full">
+      <h3>Resumo Geral da Amostra</h3>
+      <table id="tabelaResumo">
+        <thead>
+          <tr>
+            <th>Total de Respostas</th>
+            <th>Média Geral de Pontos</th>
+            <th>Gênero Predominante</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
