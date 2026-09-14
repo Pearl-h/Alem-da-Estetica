@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f9f5f2 0%, #f8d7da 100%);
+  background: linear-gradient(135deg, #fffbf6 0%, #fff4d6 100%);
   min-height: 100vh;
   color: #333;
 }
@@ -63,7 +63,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #e74c3c;
+  color: #d99b00;
 }
 
 .nav-links a::after {
@@ -73,7 +73,7 @@ header {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #e74c3c;
+  background-color: #f39c12;
   transition: width 0.3s ease;
 }
 
@@ -164,7 +164,7 @@ header {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
@@ -205,7 +205,7 @@ header {
 
 .card-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #e74c3c, #f39c12);
+  background: linear-gradient(135deg, #f39c12, #d99b00);
   color: white;
   padding: 12px 30px;
   border-radius: 25px;
@@ -216,7 +216,7 @@ header {
 
 .card:hover .card-btn {
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
 }
 
 .stats-section {
@@ -234,7 +234,7 @@ header {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #f9d76a 0%, #f3a712 100%);
+  background: linear-gradient(135deg, #fff3b0 0%, #f3a712 100%);
   color: #2f2200;
   padding: 40px;
   border-radius: 15px;
@@ -295,7 +295,7 @@ main + p {
 }
 
 .contacts-section {
-  padding: 80px 40px 500px 40px;
+  padding: 80px 40px 85px 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -320,7 +320,7 @@ main + p {
   padding: 35px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border-left: 4px solid #e74c3c;
+  border-left: 4px solid #f39c12;
 }
 
 .contact-card:hover {
@@ -348,10 +348,10 @@ main + p {
 }
 
 footer {
-  background-color: #2c3e50;
-  color: white;
+  background-color: #ffd725;
+  color: black;
   text-align: center;
-  padding: 30px 40px;
+  padding: 20px 40px;
   margin-top: 0;
 }
 
