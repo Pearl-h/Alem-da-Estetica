@@ -24,6 +24,11 @@ const artigos = [
     categoria: "Prática",
     link: "https://www.psicologossaopaulo.com.br/blog/pressao-estetica-como-ela-afeta-sua-saude-mental/"
   }
+  {
+    titulo: "Como a Moda Muda  — História da Moda",
+    categoria: "História",
+    link: "https://modahistorica.blogspot.com/"
+  },
 ];
 
 function carregarArtigos() {
