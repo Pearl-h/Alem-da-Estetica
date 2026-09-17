@@ -26,7 +26,6 @@
       text-align: center;
     }
     h2 { color: #8b668b; }
-    p { color: #666; }
     button {
       background: #dda0dd;
       color: white;
@@ -35,42 +34,26 @@
       border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s;
       margin-top: 15px;
     }
-    button:hover {
-      background: #c896c8;
-    }
-    .opcoes {
-      text-align: left;
-      margin-top: 25px;
-    }
+    button:hover { background: #c896c8; }
+    .opcoes { text-align: left; margin-top: 25px; }
     .opcoes button {
-      display: block;
-      width: 100%;
-      padding: 12px 18px;
-      margin: 10px 0;
-      background: #f9f9f9;
-      border-radius: 10px;
-      border: none;
-      border-left: 4px solid #98fb98;
-      color: #444;
+      display: block; width: 100%; margin: 10px 0;
+      padding: 12px 18px; background: #f9f9f9;
+      border-radius: 10px; border: none;
+      border-left: 4px solid #98fb98; color: #444;
       text-align: left;
     }
-    .opcoes button:hover {
-      background: #f0f0ff;
-      border-color: #dda0dd;
-    }
+    .opcoes button:hover { background: #f0f0ff; border-color: #dda0dd; }
   </style>
 </head>
 <body>
   <div class="caixa-central">
-    <!-- ⚠️ IDs EXATAMENTE COMO O SEU quiz.js BUSCA! -->
     <div id="quiz">
-      
       <div id="startScreen" class="painel">
         <h2>Descubra seu Padrão 💜</h2>
-        <p>Bem-vindo ao quiz! Não há respostas erradas 💡</p>
+        <p>Bem-vinda(o)! Não há respostas erradas 💡</p>
         <button id="startButton">Iniciar Quiz</button>
       </div>
 
@@ -79,10 +62,9 @@
         <div id="options" class="opcoes"></div>
         <button id="submit">Enviar</button>
       </div>
-
     </div>
   </div>
 
   <script src="quiz.js"></script>
 </body>
-</html>   
+</html>
