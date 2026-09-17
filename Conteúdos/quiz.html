@@ -17,7 +17,7 @@
       margin: 0 auto;
     }
     .painel {
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
       border-radius: 18px;
       margin-bottom: 25px;
@@ -52,8 +52,7 @@
       margin: 10px 0;
       background: #f9f9f9;
       border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s;
+      border: none;
       border-left: 4px solid #98fb98;
       color: #444;
       text-align: left;
@@ -62,22 +61,14 @@
       background: #f0f0ff;
       border-color: #dda0dd;
     }
-    .result-panel {
-      background: #fff;
-      padding: 30px;
-      border-radius: 18px;
-      border-left: 5px solid #ffd700;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
   <div class="caixa-central">
-    <!-- ⚠️ IDs EXATAMENTE COMO O quiz.js BUSCA → sem erro! -->
+    <!-- ⚠️ IDs EXATAMENTE como o seu quiz.js procura -->
     <div id="tela-inicial" class="painel">
       <h2>Descubra seu Padrão 💜</h2>
-      <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
-      <p>Seja sincero para obter o melhor resultado 💡</p>
+      <p>Bem-vindo ao quiz! Não há respostas certas ou erradas 💡</p>
       <button id="botao-inicial">Iniciar Quiz</button>
     </div>
 
@@ -90,7 +81,6 @@
     <div id="quizContainer"></div>
   </div>
 
-  <!-- ✅ O JS continua INTACTO — não mexe nele! -->
   <script src="quiz.js"></script>
 </body>
 </html>
