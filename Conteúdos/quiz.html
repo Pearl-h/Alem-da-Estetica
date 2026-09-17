@@ -17,7 +17,7 @@
       margin: 0 auto;
     }
     .painel {
-      background: #fff;
+      background: #ffffff;
       padding: 30px;
       border-radius: 18px;
       margin-bottom: 25px;
@@ -27,7 +27,7 @@
     }
     h2 { color: #8b668b; }
     p { color: #666; }
-    button, .botao-inicial, .primary-btn {
+    button {
       background: #dda0dd;
       color: white;
       border: none;
@@ -38,14 +38,14 @@
       transition: background 0.3s;
       margin-top: 15px;
     }
-    button:hover, .botao-inicial:hover, .primary-btn:hover {
+    button:hover {
       background: #c896c8;
     }
     .opcoes {
       text-align: left;
       margin-top: 25px;
     }
-    .opcoes button, .botao-de-opcao {
+    .opcoes button {
       display: block;
       width: 100%;
       padding: 12px 18px;
@@ -58,7 +58,7 @@
       color: #444;
       text-align: left;
     }
-    .opcoes button:hover, .botao-de-opcao:hover {
+    .opcoes button:hover {
       background: #f0f0ff;
       border-color: #dda0dd;
     }
@@ -73,12 +73,12 @@
 </head>
 <body>
   <div class="caixa-central">
-    <!-- ✅ IDs CORRETOS → o JS encontra agora! -->
+    <!-- ⚠️ IDs EXATAMENTE COMO O quiz.js BUSCA → sem erro! -->
     <div id="tela-inicial" class="painel">
       <h2>Descubra seu Padrão 💜</h2>
       <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
       <p>Seja sincero para obter o melhor resultado 💡</p>
-      <button id="botao-inicial" class="botao-inicial">Iniciar Quiz</button>
+      <button id="botao-inicial">Iniciar Quiz</button>
     </div>
 
     <div id="tela-de-teste" class="painel" style="display:none;">
@@ -90,7 +90,7 @@
     <div id="quizContainer"></div>
   </div>
 
-  <!-- ✅ O JS continua EXATAMENTE como está -->
+  <!-- ✅ O JS continua INTACTO — não mexe nele! -->
   <script src="quiz.js"></script>
 </body>
 </html>
