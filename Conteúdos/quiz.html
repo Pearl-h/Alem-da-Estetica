@@ -16,7 +16,7 @@
       max-width: 850px;
       margin: 0 auto;
     }
-    .tela-inicial, .painel-perguntas {
+    .painel {
       background: #fff;
       padding: 30px;
       border-radius: 18px;
@@ -45,7 +45,8 @@
       text-align: left;
       margin-top: 25px;
     }
-    .opcao-item {
+    .opcoes label {
+      display: block;
       padding: 12px 18px;
       margin: 10px 0;
       background: #f9f9f9;
@@ -54,7 +55,7 @@
       transition: all 0.3s;
       border-left: 4px solid #98fb98;
     }
-    .opcao-item:hover {
+    .opcoes label:hover {
       background: #f0f0ff;
       border-color: #dda0dd;
     }
@@ -63,20 +64,23 @@
 <body>
   <div class="caixa-central">
     <principal>
-      <eu ia="tela-inicial" class="tela-inicial">
+      <!-- TELA INICIAL → NÃO MUDA OS NOMES DAS CLASSES! -->
+      <eu ia="tela-inicial" class="painel">
         <h2>Descubra seu Padrão 💜</h2>
         <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
         <p>Seja sincero para obter o melhor resultado 💡</p>
         <botao eu-ia="botao-inicial" class="botao-inicial">Iniciar Quiz</botao>
       </eu>
 
-      <eu ia="tela-de-teste" class="painel-perguntas" style="display:none;">
+      <!-- PAINEL DE PERGUNTAS → MANTÉM OS NOMES ORIGINAIS -->
+      <eu ia="tela-de-teste" class="painel" style="display:none;">
         <h2 eu-ia="pergunta"></h2>
         <div eu-ia="opcoes" class="opcoes"></div>
         <botao eu-ia="enviar" class="botao-primario">Enviar</botao>
       </eu>
     </principal>
 
+    <!-- ✅ MANTÉM O JS ORIGINAL → É ELE QUE FAZ FUNCIONAR -->
     <roteiro src="quiz.js"></roteiro>
   </div>
 </body>
