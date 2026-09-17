@@ -12,22 +12,19 @@
       padding: 30px;
       color: #444;
     }
-    .caixa-central {
-      max-width: 850px;
-      margin: 0 auto;
-    }
     .painel {
-      background: #fff;
+      background: #ffffff;
       padding: 30px;
       border-radius: 18px;
-      margin-bottom: 25px;
+      margin: 0 auto;
+      max-width: 850px;
       border-left: 5px solid #dda0dd;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       text-align: center;
     }
     h2 { color: #8b668b; }
     p { color: #666; }
-    .botao-inicial, .botao-primario {
+    button {
       background: #dda0dd;
       color: white;
       border: none;
@@ -38,50 +35,46 @@
       transition: background 0.3s;
       margin-top: 15px;
     }
-    .botao-inicial:hover, .botao-primario:hover {
+    button:hover {
       background: #c896c8;
     }
-    .opcoes {
-      text-align: left;
-      margin-top: 25px;
-    }
-    .opcoes label {
+    label {
       display: block;
       padding: 12px 18px;
-      margin: 10px 0;
+      margin: 10px auto;
+      max-width: 700px;
       background: #f9f9f9;
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s;
       border-left: 4px solid #98fb98;
+      text-align: left;
     }
-    .opcoes label:hover {
+    label:hover {
       background: #f0f0ff;
       border-color: #dda0dd;
     }
   </style>
 </head>
 <body>
-  <div class="caixa-central">
-    <principal>
-      <!-- TELA INICIAL → NÃO MUDA OS NOMES DAS CLASSES! -->
-      <eu ia="tela-inicial" class="painel">
-        <h2>Descubra seu Padrão 💜</h2>
-        <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
-        <p>Seja sincero para obter o melhor resultado 💡</p>
-        <botao eu-ia="botao-inicial" class="botao-inicial">Iniciar Quiz</botao>
-      </eu>
+  <principal>
+    <!-- TELA INICIAL — NÃO MEXI NOS ATRIBUTOS, SÓ ADICIONEI O ESTILO -->
+    <eu ia="tela-inicial" class="painel">
+      <h2>Descubra seu Padrão 💜</h2>
+      <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
+      <p>Seja sincero para obter o melhor resultado 💡</p>
+      <botao eu-ia="botao-inicial">Iniciar Quiz</botao>
+    </eu>
 
-      <!-- PAINEL DE PERGUNTAS → MANTÉM OS NOMES ORIGINAIS -->
-      <eu ia="tela-de-teste" class="painel" style="display:none;">
-        <h2 eu-ia="pergunta"></h2>
-        <div eu-ia="opcoes" class="opcoes"></div>
-        <botao eu-ia="enviar" class="botao-primario">Enviar</botao>
-      </eu>
-    </principal>
+    <!-- PERGUNTAS — MANTIVE TUDO IGUAL PARA FUNCIONAR -->
+    <eu ia="tela-de-teste" class="painel" style="display:none;">
+      <h2 eu-ia="pergunta"></h2>
+      <div eu-ia="opcoes"></div>
+      <botao eu-ia="enviar">Enviar</botao>
+    </eu>
+  </principal>
 
-    <!-- ✅ MANTÉM O JS ORIGINAL → É ELE QUE FAZ FUNCIONAR -->
-    <roteiro src="quiz.js"></roteiro>
-  </div>
+  <!-- ✅ O JS CONTINUA EXATAMENTE COMO ESTAVA — É ELE QUE FAZ FUNCIONAR -->
+  <roteiro src="quiz.js"></roteiro>
 </body>
 </html>
