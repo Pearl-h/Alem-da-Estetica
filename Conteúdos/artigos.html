@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artigos</title>
-  <link rel="stylesheet" href="pasta.css">
+  <title>Artigos — Além da Estética</title>
+  <style>
+    body {
+      background: #fff9fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+      color: #444;
+    }
+    .caixa {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .intro {
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      border-left: 5px solid #dda0dd;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    h2 { color: #8b668b; }
+  </style>
 </head>
 <body>
-
-  <header>
-    <div class="nav-links">
-      <a href="index.html">Início</a>
-      <a href="historia.html">História</a>
-      <a href="conteudos.html">Conteúdos</a>
-      <a href="contatos.html">Contatos</a>
+  <div class="caixa">
+    <!-- Texto introdutório -->
+    <div class="intro">
+      <h2>Estética e Saúde Mental 💜</h2>
+      <p>A relação entre estética e saúde mental é complexa: envolve os impactos da pressão social na autoimagem e também os efeitos positivos do autocuidado.</p>
+      <p><strong>Pressão estética:</strong> Padrões irreais geram insatisfação corporal em 23% a 75% das pessoas, podendo causar ansiedade. Já o cuidado consciente eleva a autoestima e reduz o estresse.</p>
     </div>
-  </header>
 
-  <main class="hero-container">
-    <section class="hero-text">
-      <h1 class="hero-title">Artigos</h1>
-      <p class="hero-description">
-        Explore uma seleção de artigos que oferecem insights valiosos para promover uma compreensão mais profunda sobre a relação entre aparência e autoestima.
-      </p>
-    </section>
+    <!-- Aqui vão aparecer os artigos do seu .js -->
+    <div id="lista-artigos"></div>
+  </div>
 
-    <section id="conteudos" class="articles-section">
-            <h2>Artigos em Destaque</h2>
-            <div class="cards-grid" id="cards-container">
-            </div>
-        </section>
-  </main>
-
+  <!-- ✅ MANTENDO SEU ARQUIVO ORIGINAL -->
   <script src="artigos.js"></script>
-  
-  <footer>
-    <p>Projeto  Acadêmico - Além da Estética 2026.</p>
-  </footer>
-  
 </body>
 </html>
