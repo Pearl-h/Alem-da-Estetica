@@ -1,37 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-  <link rel="stylesheet" href="pasta.css">
+  <title>Quiz — Além da Estética</title>
+  <style>
+    body {
+      background: #fff9fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+      color: #444;
+    }
+    .caixa-central {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .tela-inicial, .painel-perguntas {
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      border-left: 5px solid #dda0dd;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    h2 { color: #8b668b; }
+    p { color: #666; }
+    .botao-inicial, .botao-primario {
+      background: #dda0dd;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 15px;
+    }
+    .botao-inicial:hover, .botao-primario:hover {
+      background: #c896c8;
+    }
+    .opcoes {
+      text-align: left;
+      margin-top: 25px;
+    }
+    .opcao-item {
+      padding: 12px 18px;
+      margin: 10px 0;
+      background: #f9f9f9;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      border-left: 4px solid #98fb98;
+    }
+    .opcao-item:hover {
+      background: #f0f0ff;
+      border-color: #dda0dd;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../historia.html">História</a>
-      <a href="../conteudos.html">Conteúdos</a>
-      <a href="../contatos.html">Contatos</a>
-    </nav>
-  </header>
+  <div class="caixa-central">
+    <principal>
+      <eu ia="tela-inicial" class="tela-inicial">
+        <h2>Descubra seu Padrão 💜</h2>
+        <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
+        <p>Seja sincero para obter o melhor resultado 💡</p>
+        <botao eu-ia="botao-inicial" class="botao-inicial">Iniciar Quiz</botao>
+      </eu>
 
-  <main id="quiz">
-    <div id="start-screen" class="quiz-panel">
-      <h1>Descubra seu Padrão</h1>
-      <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
-      <h3>Seja sincero para obter o melhor resultado</h3>
-      <button id="start-btn" class="primary-btn">Iniciar Quiz</button>
-    </div>
+      <eu ia="tela-de-teste" class="painel-perguntas" style="display:none;">
+        <h2 eu-ia="pergunta"></h2>
+        <div eu-ia="opcoes" class="opcoes"></div>
+        <botao eu-ia="enviar" class="botao-primario">Enviar</botao>
+      </eu>
+    </principal>
 
-    <div id="quiz-screen" class="quiz-panel" style="display: none;">
-      <h2 id="question"></h2>
-      <div id="options"></div>
-      <button id="submit" class="primary-btn">Enviar</button>
-    </div>
-  </main>
-
-  <script src="quiz.js"></script>
+    <roteiro src="quiz.js"></roteiro>
+  </div>
 </body>
 </html>
