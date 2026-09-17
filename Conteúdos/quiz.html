@@ -12,19 +12,22 @@
       padding: 30px;
       color: #444;
     }
+    .caixa-central {
+      max-width: 850px;
+      margin: 0 auto;
+    }
     .painel {
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
       border-radius: 18px;
-      margin: 0 auto;
-      max-width: 850px;
+      margin-bottom: 25px;
       border-left: 5px solid #dda0dd;
       box-shadow: 0 3px 10px rgba(0,0,0,0.05);
       text-align: center;
     }
     h2 { color: #8b668b; }
     p { color: #666; }
-    button {
+    button, .botao-inicial, .primary-btn {
       background: #dda0dd;
       color: white;
       border: none;
@@ -35,46 +38,59 @@
       transition: background 0.3s;
       margin-top: 15px;
     }
-    button:hover {
+    button:hover, .botao-inicial:hover, .primary-btn:hover {
       background: #c896c8;
     }
-    label {
+    .opcoes {
+      text-align: left;
+      margin-top: 25px;
+    }
+    .opcoes button, .botao-de-opcao {
       display: block;
+      width: 100%;
       padding: 12px 18px;
-      margin: 10px auto;
-      max-width: 700px;
+      margin: 10px 0;
       background: #f9f9f9;
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s;
       border-left: 4px solid #98fb98;
+      color: #444;
       text-align: left;
     }
-    label:hover {
+    .opcoes button:hover, .botao-de-opcao:hover {
       background: #f0f0ff;
       border-color: #dda0dd;
+    }
+    .result-panel {
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      border-left: 5px solid #ffd700;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <principal>
-    <!-- TELA INICIAL — NÃO MEXI NOS ATRIBUTOS, SÓ ADICIONEI O ESTILO -->
-    <eu ia="tela-inicial" class="painel">
+  <div class="caixa-central">
+    <!-- ✅ IDs CORRETOS → o JS encontra agora! -->
+    <div id="tela-inicial" class="painel">
       <h2>Descubra seu Padrão 💜</h2>
       <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
       <p>Seja sincero para obter o melhor resultado 💡</p>
-      <botao eu-ia="botao-inicial">Iniciar Quiz</botao>
-    </eu>
+      <button id="botao-inicial" class="botao-inicial">Iniciar Quiz</button>
+    </div>
 
-    <!-- PERGUNTAS — MANTIVE TUDO IGUAL PARA FUNCIONAR -->
-    <eu ia="tela-de-teste" class="painel" style="display:none;">
-      <h2 eu-ia="pergunta"></h2>
-      <div eu-ia="opcoes"></div>
-      <botao eu-ia="enviar">Enviar</botao>
-    </eu>
-  </principal>
+    <div id="tela-de-teste" class="painel" style="display:none;">
+      <h2 id="pergunta"></h2>
+      <div id="opcoes" class="opcoes"></div>
+      <button id="enviar">Enviar</button>
+    </div>
 
-  <!-- ✅ O JS CONTINUA EXATAMENTE COMO ESTAVA — É ELE QUE FAZ FUNCIONAR -->
-  <roteiro src="quiz.js"></roteiro>
+    <div id="quizContainer"></div>
+  </div>
+
+  <!-- ✅ O JS continua EXATAMENTE como está -->
+  <script src="quiz.js"></script>
 </body>
 </html>
