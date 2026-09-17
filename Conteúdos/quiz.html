@@ -65,22 +65,24 @@
 </head>
 <body>
   <div class="caixa-central">
-    <!-- ⚠️ IDs EXATAMENTE como o seu quiz.js procura -->
-    <div id="tela-inicial" class="painel">
-      <h2>Descubra seu Padrão 💜</h2>
-      <p>Bem-vindo ao quiz! Não há respostas certas ou erradas 💡</p>
-      <button id="botao-inicial">Iniciar Quiz</button>
-    </div>
+    <!-- ⚠️ IDs EXATAMENTE COMO O SEU quiz.js BUSCA! -->
+    <div id="quiz">
+      
+      <div id="startScreen" class="painel">
+        <h2>Descubra seu Padrão 💜</h2>
+        <p>Bem-vindo ao quiz! Não há respostas erradas 💡</p>
+        <button id="startButton">Iniciar Quiz</button>
+      </div>
 
-    <div id="tela-de-teste" class="painel" style="display:none;">
-      <h2 id="pergunta"></h2>
-      <div id="opcoes" class="opcoes"></div>
-      <button id="enviar">Enviar</button>
-    </div>
+      <div id="quizScreen" class="painel" style="display:none;">
+        <h2 id="question"></h2>
+        <div id="options" class="opcoes"></div>
+        <button id="submit">Enviar</button>
+      </div>
 
-    <div id="quizContainer"></div>
+    </div>
   </div>
 
   <script src="quiz.js"></script>
 </body>
-</html>
+</html>   
