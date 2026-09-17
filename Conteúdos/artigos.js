@@ -1,91 +1,118 @@
-const artigos = [
-  {
-    titulo: "Corpo perfeito: o impacto da busca estética na saúde mental",
-    categoria: "Tecnologia & Saúde",
-    link: "https://share.google/B6C2CEw7jfkHeVCiN"
-  },
-  {
-    titulo: "Transtornos Psiquiátricos na Medicina Estética",
-    categoria: "Saúde Mental",
-    link: "https://share.google/PXtHZZkEOIZpVS25a"
-  },
-  {
-    titulo: "A Influência dos Procedimentos Estéticos na Saúde Mental",
-    categoria: "Pesquisa",
-    link: "https://revista.fumec.br/index.php/esteticaemmovimento/article/view/9808"
-  },
-  {
-    titulo: "Pressão Estética e Saúde Mental — Drauzio Varella",
-    categoria: "Divulgação",
-    link: "https://drauziovarella.uol.com.br/psiquiatria/pressao-estetica-pode-afetar-a-saude-mental/"
-  },
-  {
-    titulo: "Pressão Estética: Como Lidar — Psicólogos SP",
-    categoria: "Prática",
-    link: "https://www.psicologossaopaulo.com.br/blog/pressao-estetica-como-ela-afeta-sua-saude-mental/"
-  }
-  {
-    titulo: "Como a Moda Muda  — História da Moda",
-    categoria: "História",
-    link: "https://modahistorica.blogspot.com/"
-  },
-];
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigos — Estética e Saúde Mental</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-function carregarArtigos() {
-  const container = document.getElementById('cards-container');
-  if (!container) return;
-  container.innerHTML = "";
+    body {
+      background: linear-gradient(135deg, #fff0f5, #e6e6fa, #f0fff4);
+      min-height: 100vh;
+      padding: 2rem;
+    }
 
-  const intro = document.createElement('div');
-  intro.style.background = '#fff0f5';
-  intro.style.padding = '30px';
-  intro.style.borderRadius = '20px';
-  intro.style.marginBottom = '30px';
-  intro.style.border = '2px solid #f8d7da';
-  intro.innerHTML = `
-    <h2 style="color: #b48ead; text-align: center; margin-top: 0;"> Estética e Saúde Mental</h2>
-    
-    <p style="color: #5a4b6a; line-height: 1.7;">A relação entre estética e saúde mental é complexa: vai desde a pressão social na autoimagem até os efeitos dos procedimentos.</p>
-    
-    <br>
-    
-    <p style="color: #5a4b6a;"><strong> Pressão:</strong> Padrões irreais → insatisfação, ansiedade e depressão. Mulheres e jovens são os mais afetados.</p>
-    
-    <br>
-    
-    <p style="color: #5a4b6a;"><strong> Procedimentos:</strong> Podem elevar a autoestima, mas sem acompanhamento podem esconder sofrimentos. Avaliação psicológica é essencial!</p>
-    
-    <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px dashed #e8c8d0;">
-      <img src="../img/Passaro.png" alt="Pássaro" style="max-width: 180px; width: 100%; border-radius: 16px;">
-      <p style="color: #9370db; margin-top: 10px; font-style: italic; margin-bottom: 0;">"Assim como o pássaro, sua mente merece liberdade e carinho" </p>
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      background: #ffffffdd;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px #00000010;
+      margin-bottom: 2rem;
+      border-left: 5px solid #dda0dd;
+    }
+
+    .intro h2 {
+      color: #8b668b;
+      margin-bottom: 1rem;
+    }
+
+    .artigos {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px #0000000f;
+      border-left: 5px solid #98fb98;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      color: #5f7367;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .card a {
+      color: #8b668b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Texto Introdutório -->
+    <div class="intro">
+      <h2>Estética e Saúde Mental: uma relação de dois lados 💜</h2>
+      <p>A relação entre estética e saúde mental é complexa, envolvendo desde os impactos da pressão social na autoimagem até os efeitos psicológicos de procedimentos estéticos.</p>
+      <p><strong>Pressão estética:</strong> Padrões inatingíveis nas redes sociais geram insatisfação corporal entre 23% e 75% das pessoas, podendo levar a transtornos emocionais.</p>
+      <p><strong>Por outro lado:</strong> o autocuidado consciente eleva a autoestima, reduz estresse e fortalece a confiança. Abaixo, estudos e artigos científicos para aprofundar:</p>
     </div>
-  `;
-  container.appendChild(intro);
 
-  const caixaLinks = document.createElement('div');
-  caixaLinks.style.display = 'flex';
-  caixaLinks.style.flexWrap = 'wrap';
-  caixaLinks.style.gap = '15px';
-  caixaLinks.style.marginBottom = '30px';
+    <!-- Lista de Artigos -->
+    <div class="artigos">
+      <div class="card">
+        <h3>📄 Artigo 1 — Impactos da pressão estética</h3>
+        <p>Estudo sobre como padrões de beleza irreais afetam a autoimagem e a saúde mental.</p>
+        <a href="https://www.repositoriodigital.univag.com.br/index.php/psicba/article/download/2051/1964/5603" target="_blank">Acessar artigo →</a>
+      </div>
 
-  artigos.forEach(item => {
-    const cartao = document.createElement('a');
-    cartao.href = item.link;
-    cartao.target = '_blank';
-    cartao.style.flex = '1';
-    cartao.style.minWidth = '220px';
-    cartao.style.padding = '18px';
-    cartao.style.background = '#f9f5f2';
-    cartao.style.border = '2px solid #e6e6fa';
-    cartao.style.borderRadius = '16px';
-    cartao.style.textDecoration = 'none';
-    cartao.innerHTML = `
-      <strong style="color: #9370db; display: block; margin-bottom: 5px;">${item.titulo}</strong>
-      <span style="color: #7a7a7a; font-size: 0.9rem;">${item.categoria}</span>
-    `;
-    caixaLinks.appendChild(cartao);
-  });
-  container.appendChild(caixaLinks);
-}
+      <div class="card">
+        <h3>📄 Artigo 2 — Procedimentos e bem-estar</h3>
+        <p>Análise dos benefícios e riscos psicológicos dos procedimentos estéticos.</p>
+        <a href="https://revista.fumec.br/index.php/esteticaemmovimento/article/view/9808" target="_blank">Acessar artigo →</a>
+      </div>
 
-document.addEventListener('DOMContentLoaded', carregarArtigos);
+      <div class="card">
+        <h3>📄 Artigo 3 — Dados e estatísticas</h3>
+        <p>Números reais sobre insatisfação corporal e transtornos ligados à estética.</p>
+        <a href="https://share.google/PXtHZZkEOIZpVS25a" target="_blank">Ver dados →</a>
+      </div>
+
+      <div class="card">
+        <h3>📄 Artigo 4 — Cuidado e equilíbrio</h3>
+        <p>Como praticar autocuidado sem prejudicar a saúde mental.</p>
+        <a href="https://share.google/B6C2CEw7jfkHeVCiN" target="_blank">Leitura complementar →</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
