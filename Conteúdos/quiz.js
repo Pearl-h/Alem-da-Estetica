@@ -228,7 +228,16 @@ function startQuiz() {
     loadQuestion();
 }
 
+//Verifica se os elementos existem antes de usar
+ const starButton = 
+document.getElementById('startButton');
+ const startScreen = 
+documento.getElementById('startScreen');
+ const quizScreen =
+document.getElementById('quizScreen');
+ if (starButton && startScreen && quizScreen) {
 startButton.addEventListener("click", startQuiz);
+ }
 
 function loadQuestion() {
     optionsElement.innerHTML = "";
