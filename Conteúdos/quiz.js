@@ -1,23 +1,28 @@
 const questions = [
 {
-    id: "FaixaEtaria",
-    question: "1. Qual a sua faixa etária de idade?",
+    id: "age_group",
+    specialId: "age_group",
+    isDemographic: true,
+    category: "Demographics",
+    question: "1. Qual a sua faixa etária?",
     options: [
-        { text: "+10 anos"},
-        { text: "+18 anos"},
-        { text: "+25 anos"},
-        { text: "+35 anos"},
-        { text: "+40 anos"}
+      { id: "a", text: "18 a 24 anos",},
+      { id: "b", text: "25 a 34 anos",},
+      { id: "c", text: "35 a 49 anos",},
+      { id: "d", text: "50+ anos"}
     ]
-},
+  },
 {
-    id: "genero",
+    id: "gender",
+    specialId: "gender",
+    isDemographic: true,
+    category: "Demographics",
     question: "2. Qual o seu gênero?",
     options: [
-        { text: "Masculino"},
-        { text: "Feminino"},
-        { text: "Outro"},
-        { text: "Prefiro não responder"}
+      { id: "a", text: "Mulher",},
+      { id: "b", text: "Homem",},
+      { id: "c", text: "Não binário / Gênero diverso",},
+      { id: "d", text: "Outro / Prefiro não dizer",}
     ]
 },
 {
@@ -204,8 +209,8 @@ const questions = [
 
 let respostasDetalhadas = [];
 let dadosUsuario = {
-    faixaEtaria: "",
-    genero: ""
+    age_group: "",
+    gender: ""
 };
 
 let currentQuestionIndex = 0;
@@ -228,16 +233,7 @@ function startQuiz() {
     loadQuestion();
 }
 
-//Verifica se os elementos existem antes de usar
- const starButton = 
-document.getElementById('startButton');
- const startScreen = 
-documento.getElementById('startScreen');
- const quizScreen =
-document.getElementById('quizScreen');
- if (starButton && startScreen && quizScreen) {
 startButton.addEventListener("click", startQuiz);
- }
 
 function loadQuestion() {
     optionsElement.innerHTML = "";
@@ -264,15 +260,15 @@ function loadQuestion() {
 }
 
 function selectOption(question, option) {
-    if (question.id === "FaixaEtaria") {
-        dadosUsuario.faixaEtaria = option.text;
+    if (question.id === "age_group") {
+        dadosUsuario.age_group = option.text;
     }
-    else if (question.id === "genero") {
-        dadosUsuario.genero = option.text;
+    else if (question.id === "gender") {
+        dadosUsuario.gender = option.text;
     }
     else {
         respostasDetalhadas.push(option.points);
-        totalScore += option.points; // Soma a pontuação apenas se for pergunta do quiz
+        totalScore += option.points; 
     }
 
     currentQuestionIndex++;
@@ -285,7 +281,8 @@ function enviarDadosParaOGoogleSheets(dados) {
 
   console.log("DADOS ANTES DO ENVIO:");
   console.log(dados);
-  console.log("faixaEtaria ANTES DO ENVIO:", dados.faixaEtaria);
+  console.log("age_group ANTES DO ENVIO:", dados.age_group);
+  console.log("gender ANTES DO ENVIO:", dados.gender);
   console.log("JSON ENVIADO:", JSON.stringify(dados));
 
   fetch(TCC_Dados, {
@@ -325,8 +322,8 @@ function showResult() {
     }
 
     const payload = {
-        faixaEtaria: dadosUsuario.faixaEtaria,
-        genero: dadosUsuario.genero,
+        age_group: dadosUsuario.age_group,
+        gender: dadosUsuario.gender,
         totalScore: totalScore,
         respostas: respostasDetalhadas
     };
