@@ -1,115 +1,336 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mídia</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="pasta.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídia — Além da Estética</title>
+  <link rel="stylesheet" href="pasta.css">
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --panel: rgba(255, 255, 255, 0.94);
+      --white: #ffffff;
+      --gold: #f7d66e;
+      --gold-dark: #d49a00;
+      --text: #2f2f2f;
+      --muted: #5a5a5a;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fffaf0 0%, #f7d66e 100%);
+      color: var(--text);
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 18px 30px;
+    }
+
+    nav a {
+      color: #555;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold-dark);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold-dark);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .midia-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .intro {
+      margin: 0 auto 28px;
+      max-width: 720px;
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    h2 {
+      margin: 36px 0 22px;
+      color: #2c3e50;
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+    }
+
+    .secao {
+      background: var(--panel);
+      border: 1px solid rgba(212, 154, 0, 0.2);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px var(--shadow);
+      padding: 28px 24px;
+      margin-bottom: 22px;
+    }
+
+    .secao h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #2c3e50;
+      font-size: 1.4rem;
+    }
+
+    .secao ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .secao li + li {
+      margin-top: 8px;
+    }
+
+    .secao strong {
+      color: #2c3e50;
+    }
+
+    .grid-videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .video-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(212, 154, 0, 0.12);
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 240px;
+    }
+
+    .video-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+
+    .video-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .video-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #f7d66e, #e7a900);
+      color: #2f2200;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .video-link a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(212, 154, 0, 0.2);
+    }
+
+    .destaque-final {
+      margin-top: 42px;
+      background: rgba(255, 255, 255, 0.9);
+      border-left: 5px solid var(--gold-dark);
+      border-radius: 16px;
+      padding: 24px 22px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    }
+
+    .destaque-final h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-size: 1.5rem;
+    }
+
+    .destaque-final p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+
+      .midia-page {
+        padding-top: 28px;
+      }
+
+      .secao {
+        padding: 22px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <nav>
-            <a href="index.html">Início</a>
-            <a href="historia.html">História</a>
-            <a href="conteudos.html">Conteúdos</a>
-            <a href="contatos.html">Contatos</a>
-  </nav>
+    <nav aria-label="Menu principal">
+      <a href="../index.html">Início</a>
+      <a href="../historia.html">História</a>
+      <a href="../conteudos.html">Conteúdos</a>
+      <a href="../contatos.html">Contatos</a>
+    </nav>
   </header>
 
+  <main class="midia-page">
     <h1>🎬 Mídia e Recursos</h1>
     <p class="intro">Conteúdos sobre estética, autocuidado, autoestima e saúde mental. 💜</p>
 
     <h2>🧠 Saúde Mental e Autoestima</h2>
 
-    <div class="secao">
-        <h3>✅ Entenda a relação entre elas</h3>
-        <ul>
-            <li><strong>Autoestima não é permanente:</strong> ela varia ao longo do tempo e não define quem você é.</li>
-            <li><strong>Ciclo entre elas:</strong> autoestima baixa pode piorar a saúde mental, e problemas mentais podem enfraquecer a autoconfiança.</li>
-            <li><strong>Não confunda valor com desempenho:</strong> seu valor não depende do que você faz ou conquista.</li>
-        </ul>
-    </div>
+    <section class="secao">
+      <h3>✅ Entenda a relação entre elas</h3>
+      <ul>
+        <li><strong>Autoestima não é permanente:</strong> ela varia ao longo do tempo e não define quem você é.</li>
+        <li><strong>Ciclo entre elas:</strong> autoestima baixa pode piorar a saúde mental, e problemas mentais podem enfraquecer a autoconfiança.</li>
+        <li><strong>Não confunda valor com desempenho:</strong> seu valor não depende do que você faz ou conquista.</li>
+      </ul>
+    </section>
 
-    <div class="secao">
-        <h3>🛡️ Proteja sua saúde mental</h3>
-        <ul>
-            <li><strong>Estabeleça limites:</strong> aprenda a dizer "não" e se afaste de relações que sugam sua energia.</li>
-            <li><strong>Prática de autocuidado diário:</strong> sono de qualidade, alimentação equilibrada, movimento e momentos de descanso.</li>
-            <li><strong>Descarte comparações:</strong> cada pessoa tem seu ritmo e sua história; comparar-se é fonte de sofrimento.</li>
-            <li><strong>Reconheça e nomeie sentimentos:</strong> não reprima o que sente — sentir é humano, e isso não é fraqueza.</li>
-        </ul>
-    </div>
+    <section class="secao">
+      <h3>🛡️ Proteja sua saúde mental</h3>
+      <ul>
+        <li><strong>Estabeleça limites:</strong> aprenda a dizer "não" e se afaste de relações que sugam sua energia.</li>
+        <li><strong>Prática de autocuidado diário:</strong> sono de qualidade, alimentação equilibrada, movimento e momentos de descanso.</li>
+        <li><strong>Descarte comparações:</strong> cada pessoa tem seu ritmo e sua história; comparar-se é fonte de sofrimento.</li>
+        <li><strong>Reconheça e nomeie sentimentos:</strong> não reprima o que sente — sentir é humano, e isso não é fraqueza.</li>
+      </ul>
+    </section>
 
-    <div class="secao">
-        <h3>❤️ Fortaleça a autoestima sem depender de aparências</h3>
-        <ul>
-            <li><strong>Foque em seus pontos fortes:</strong> valorize o que você sabe fazer e suas qualidades, não só o que precisa melhorar.</li>
-            <li><strong>Aceite as imperfeições:</strong> errar é parte do crescimento; ninguém é perfeito — e isso é belo.</li>
-            <li><strong>Seja gentil com você mesmo:</strong> fale com você como falaria com um amigo querido — evite autocrítica severa.</li>
-            <li><strong>Busque validação interna:</strong> confie em seu julgamento, não viva esperando só aprovação dos outros.</li>
-        </ul>
-    </div>
+    <section class="secao">
+      <h3>❤️ Fortaleça a autoestima sem depender de aparências</h3>
+      <ul>
+        <li><strong>Foque em seus pontos fortes:</strong> valorize o que você sabe fazer e suas qualidades, não só o que precisa melhorar.</li>
+        <li><strong>Aceite as imperfeições:</strong> errar é parte do crescimento; ninguém é perfeito — e isso é belo.</li>
+        <li><strong>Seja gentil com você mesmo:</strong> fale com você como falaria com um amigo querido — evite autocrítica severa.</li>
+        <li><strong>Busque validação interna:</strong> confie em seu julgamento, não viva esperando só aprovação dos outros.</li>
+      </ul>
+    </section>
 
-    <div class="secao">
-        <h3>🤝 Quando precisar de ajuda</h3>
-        <ul>
-            <li><strong>Não hesite em procurar profissional:</strong> psicólogos e psiquiatras são aliados fundamentais no caminho do bem-estar.</li>
-            <li><strong>Conte com rede de apoio:</strong> compartilhe com pessoas de confiança o que está sentindo — não carregue tudo sozinha.</li>
-            <li><strong>Lembre-se:</strong> cuidar de si é um sinal de força, não de fraqueza. Buscar ajuda é coragem.</li>
-        </ul>
-    </div>
+    <section class="secao">
+      <h3>🤝 Quando precisar de ajuda</h3>
+      <ul>
+        <li><strong>Não hesite em procurar profissional:</strong> psicólogos e psiquiatras são aliados fundamentais no caminho do bem-estar.</li>
+        <li><strong>Conte com rede de apoio:</strong> compartilhe com pessoas de confiança o que está sentindo — não carregue tudo sozinha.</li>
+        <li><strong>Lembre-se:</strong> cuidar de si é um sinal de força, não de fraqueza. Buscar ajuda é coragem.</li>
+      </ul>
+    </section>
 
     <h2>📺 Vídeos Recomendados</h2>
     <div class="grid-videos">
-        <div class="video-card">
-            <h3>✨ Dicas de Beleza e Autocuidado — Glow Up</h3>
-            <p>Com dicas práticas e simples de cuidados com unhas, cabelo, pele, lábios e hábitos de beleza que elevam a autoestima sem esforço excessivo. Um guia completo de cuidados diários!</p>
-            <div class="video-link">
-                <a href="https://youtu.be/nIekwODLiQM?si=olW_wRJPErBNPN0i" target="_blank">▶️ Assistir no YouTube</a>
-            </div>
+      <article class="video-card">
+        <div>
+          <h3>✨ Dicas de Beleza e Autocuidado — Glow Up</h3>
+          <p>Com dicas práticas e simples de cuidados com unhas, cabelo, pele, lábios e hábitos de beleza que elevam a autoestima sem esforço excessivo. Um guia completo de cuidados diários!</p>
         </div>
+        <div class="video-link">
+          <a href="https://youtu.be/nIekwODLiQM?si=olW_wRJPErBNPN0i" target="_blank" rel="noopener noreferrer">▶️ Assistir no YouTube</a>
+        </div>
+      </article>
 
-        <div class="video-card">
-            <h3>🎀 Hábitos de Beleza que Mudaram Minha Vida</h3>
-            <p>Hábitos simples de rotina que fazem toda a diferença na pele, no cabelo e na autoimagem. Pequenas mudanças que transformam a relação com o próprio corpo e com a estética.</p>
-            <div class="video-link">
-                <a href="https://youtu.be/XPpxC2D39vw?si=USKJHUW7Qf9NCdMi" target="_blank">▶️ Assistir no YouTube</a>
-            </div>
+      <article class="video-card">
+        <div>
+          <h3>🎀 Hábitos de Beleza que Mudaram Minha Vida</h3>
+          <p>Hábitos simples de rotina que fazem toda a diferença na pele, no cabelo e na autoimagem. Pequenas mudanças que transformam a relação com o próprio corpo e com a estética.</p>
         </div>
+        <div class="video-link">
+          <a href="https://youtu.be/XPpxC2D39vw?si=USKJHUW7Qf9NCdMi" target="_blank" rel="noopener noreferrer">▶️ Assistir no YouTube</a>
+        </div>
+      </article>
 
-        <div class="video-card">
-            <h3>💭 Pressão Estética e Saúde Mental</h3>
-            <p>Reflexão importante sobre o mito do "corpo ideal" e como a busca por padrões inatingíveis afeta nossa saúde física e emocional. Um convite ao equilíbrio e à aceitação de si mesmo.</p>
-            <div class="video-link">
-                <a href="https://youtu.be/01Mu8MgUfO8?si=PNIcgQT95RFUNQrz" target="_blank">▶️ Assistir no YouTube</a>
-            </div>
+      <article class="video-card">
+        <div>
+          <h3>💭 Pressão Estética e Saúde Mental</h3>
+          <p>Reflexão importante sobre o mito do "corpo ideal" e como a busca por padrões inatingíveis afeta nossa saúde física e emocional. Um convite ao equilíbrio e à aceitação de si mesmo.</p>
         </div>
+        <div class="video-link">
+          <a href="https://youtu.be/01Mu8MgUfO8?si=PNIcgQT95RFUNQrz" target="_blank" rel="noopener noreferrer">▶️ Assistir no YouTube</a>
+        </div>
+      </article>
 
-        <div class="video-card">
-            <h3>⚡ Hábitos para Mais Energia e Bem-Estar</h3>
-            <p>Rotinas e hábitos que ajudam a combater o cansaço, a preguiça e a desmotivação. Cuidar de si também é ter energia para viver — autocuidado que fortalece corpo e mente.</p>
-            <div class="video-link">
-                <a href="https://youtu.be/v36ugYYYzh0?si=INmMz59QrbYMietf" target="_blank">▶️ Assistir no YouTube</a>
-            </div>
+      <article class="video-card">
+        <div>
+          <h3>⚡ Hábitos para Mais Energia e Bem-Estar</h3>
+          <p>Rotinas e hábitos que ajudam a combater o cansaço, a preguiça e a desmotivação. Cuidar de si também é ter energia para viver — autocuidado que fortalece corpo e mente.</p>
         </div>
+        <div class="video-link">
+          <a href="https://youtu.be/v36ugYYYzh0?si=INmMz59QrbYMietf" target="_blank" rel="noopener noreferrer">▶️ Assistir no YouTube</a>
+        </div>
+      </article>
 
-        <div class="video-card">
-            <h3>🧠 Construindo Autoestima Verdadeira</h3>
-            <p>Psicologia prática: o que realmente constrói uma autoestima saudável — para além da aparência e das conquistas. Como valorizar-se de forma genuína e duradoura.</p>
-            <div class="video-link">
-                <a href="https://youtu.be/R6uMbRW3Vzc?si=_BYvgxdAoyy9yCjj" target="_blank">▶️ Assistir no YouTube</a>
-            </div>
+      <article class="video-card">
+        <div>
+          <h3>🧠 Construindo Autoestima Verdadeira</h3>
+          <p>Psicologia prática: o que realmente constrói uma autoestima saudável — para além da aparência e das conquistas. Como valorizar-se de forma genuína e duradoura.</p>
         </div>
+        <div class="video-link">
+          <a href="https://youtu.be/R6uMbRW3Vzc?si=_BYvgxdAoyy9yCjj" target="_blank" rel="noopener noreferrer">▶️ Assistir no YouTube</a>
+        </div>
+      </article>
     </div>
 
     <div class="destaque-final">
-        <h3>✨ Lembre-se sempre:</h3>
-        <p>A beleza está em sentir-se bem por dentro, muito antes de aparecer por fora.<br>Seu valor não tem tamanho, formato ou cor — <strong>você já é suficiente, exatamente como é.</strong> 💜</p>
+      <h3>✨ Lembre-se sempre:</h3>
+      <p>A beleza está em sentir-se bem por dentro, muito antes de aparecer por fora.<br>Seu valor não tem tamanho, formato ou cor — <strong>você já é suficiente, exatamente como é.</strong> 💜</p>
     </div>
-
+  </main>
 </body>
 </html>
-    
-     
