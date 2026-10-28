@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt‑br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas — Além da Estética</title>
-    <link rel="stylesheet" href="paste.css">
+<meta charset="UTF‑8">
+<meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+<title>Questionário</title>
+<link rel="stylesheet" href="pasta.css">
 </head>
 <body>
+  <nav class="links‑de‑navegação">
+    <a href="../index.html">Início</a>
+    <a href="../historia.html">História</a>
+    <a href="../contatos.html">Contatos</a>
+  </nav>
 
-  <header>
-    <nav class="nav-links">
-      <a href="../index.html">Início</a>
-      <a href="../historia.html">História</a>
-      <a href="../conteudos.html">Conteúdos</a>
-      <a href="../contatos.html">Contatos</a>
-    </nav>
-  </header>
+  <main id="questionário">
+    <div id="tela‑inicial" class="painel‑de‑perguntas">
+      <h1>Descubra seu Padrão</h1>
+      <p>Bem‑vindo ao quiz! Lembre‑se, não há respostas erradas!</p>
+      <h3>Seja sincero para obter o melhor resultado</h3>
+      <button id="botao‑iniciar" class="botao‑primario">Iniciar Quiz</button>
+    </div>
 
-<main id="cards-container">
-</main>
+    <div id="tela‑de‑teste" class="painel‑de‑perguntas" style="display:none;">
+      <h2 id="pergunta"></h2>
+      <div id="opcoes"></div>
+    </div>
+  </main>
 
-<script src="dicas.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>
