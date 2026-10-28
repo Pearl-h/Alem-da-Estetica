@@ -1,9 +1,6 @@
 const questions = [
 {
     id: "age_group",
-    specialId: "age_group",
-    isDemographic: true,
-    category: "Demographics",
     question: "1. Qual a sua faixa etária?",
     options: [
       { id: "a", text: "18 a 24 anos",},
@@ -14,9 +11,6 @@ const questions = [
   },
 {
     id: "gender",
-    specialId: "gender",
-    isDemographic: true,
-    category: "Demographics",
     question: "2. Qual o seu gênero?",
     options: [
       { id: "a", text: "Mulher",},
@@ -275,36 +269,6 @@ function selectOption(question, option) {
     loadQuestion();
 }
 
-const TCC_Dados = 'https://script.google.com/macros/s/AKfycbxm36eY9XsNFdI-siWyNl_CKLvhh6iGbd-DEaUc3BEcY66WJlfIY2OuXBzHhG60s4-GnQ/exec';
-
-function enviarDadosParaOGoogleSheets(dados) {
-
-  console.log("DADOS ANTES DO ENVIO:");
-  console.log(dados);
-  console.log("age_group ANTES DO ENVIO:", dados.age_group);
-  console.log("gender ANTES DO ENVIO:", dados.gender);
-  console.log("JSON ENVIADO:", JSON.stringify(dados));
-
-  fetch(TCC_Dados, {
-  method: 'POST',
-  mode: 'cors',
-  headers: {
-    "Content-Type": "text/plain"
-  },
-  body: JSON.stringify(dados)
-})
-  .then(response => {
-    console.log("Status HTTP:", response.status);
-    return response.text();
-  })
-  .then(result => {
-    console.log("Resposta do Apps Script:", result);
-  })
-  .catch(error => {
-    console.error("Erro ao enviar dados:", error);
-  });
-}
-
 function showResult() {
     let finalResult = "";
 
@@ -320,6 +284,35 @@ function showResult() {
     else {
         finalResult = "Você pode sentir uma pressão intensa relacionada à aparência e à aceitação. Isso não define você, e mudanças no modo como enxergamos a nós mesmos podem começar aos poucos. Cuidar da autoestima também é uma forma de autocuidado.";
     }
+
+    
+const TCC_Dados = 'https://script.google.com/macros/s/AKfycbxm36eY9XsNFdI-siWyNl_CKLvhh6iGbd-DEaUc3BEcY66WJlfIY2OuXBzHhG60s4-GnQ/exec';
+
+function enviarDadosParaOGoogleSheets(dados) {
+
+console.log("DADOS ANTES DO ENVIO:"); 
+console.log(dados); 
+console.log("age_group ANTES DO ENVIO:", dados.age_group); 
+console.log("gender ANTES DO ENVIO:", dados.gender); 
+console.log("JSON ENVIADO:", JSON.stringify(dados));
+
+fetch(TCC_Dados, { 
+    method: 'POST', // Certifique-se de usar aspas nas strings
+    headers: { 
+        'Content-Type': 'text/plain' 
+    }, 
+    body: JSON.stringify(dados) 
+}) 
+.then(response => { 
+    console.log('Status HTTP:', response.status); 
+    return response.text(); 
+}) 
+.then(result => { 
+    console.log('Resposta do Apps Script:', result); 
+}) 
+.catch(error => { 
+    console.error('Erro ao enviar dados:', error); 
+});
 
     const payload = {
         age_group: dadosUsuario.age_group,
