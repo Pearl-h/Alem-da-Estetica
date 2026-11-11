@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <header>
+      <div class="header-title">
+        <h1>Quiz</h1>
+        <h2>Descubra seu Padrão</h2>
+      </div>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="conteudos.html">Conteúdos</a>
+        <a href="contatos.html">Contatos</a>
+      </nav>
+    </header>
+
+    <main id="quiz-container">
+        <div id="start-screen" class="quiz-panel">
+            <p>Bem-vindo ao quiz! Lembre-se, não há respostas erradas!</p>
+            <p>Seja sincero para obter o melhor resultado.</p>
+        </div>
+
+        <form id="quiz-form">
+            <h2>Questões</h2>
+
+            <div id="idade" class="question-group">
+                <p>1. Qual é a sua faixa etária?</p>
+                <label><input type="radio" name="question1" value="10"> 18-24 anos</label><br>
+                <label><input type="radio" name="question1" value="20"> 25-34 anos</label><br>
+                <label><input type="radio" name="question1" value="30"> 35-49 anos</label><br>
+                <label><input type="radio" name="question1" value="40"> 50 anos ou mais</label>
+            </div>
+
+            <div id="genero" class="question-group">
+                <p>2. Qual é o seu gênero?</p>
+                <label><input type="radio" name="question2" value="50"> Masculino</label><br>
+                <label><input type="radio" name="question2" value="60"> Feminino</label><br>
+                <label><input type="radio" name="question2" value="70"> Não-binário</label><br>
+                <label><input type="radio" name="question2" value="80"> Outro</label>
+            </div>
+
+            <div id="questao3" class="question-group">
+                <p>3. Você compara sua aparência com a de pessoas que vê nas redes sociais?</p>
+                <label><input type="radio" name="question3" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question3" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question3" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao4" class="question-group">
+                <p>4. Você já deixou de participar de algum evento por não se sentir bonito(a) ou suficiente?</p>
+                <label><input type="radio" name="question4" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question4" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question4" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao5" class="question-group">
+                <p>5. Sua autoestima muda dependendo de como você acha que está fisicamente em determinado dia?</p>
+                <label><input type="radio" name="question5" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question5" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question5" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao6" class="question-group">
+                <p>6. Você sente necessidade de seguir tendências de moda para se sentir aceito(a)?</p>
+                <label><input type="radio" name="question6" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question6" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question6" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao7" class="question-group">
+                <p>7. Comentários sobre sua aparência alteram seu humor por muito tempo?</p>
+                <label><input type="radio" name="question7" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question7" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question7" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao8" class="question-group">
+                <p>8. Você já sentiu vontade de mudar algo no seu corpo após ver influenciadores, celebridades ou modelos?</p>
+                <label><input type="radio" name="question8" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question8" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question8" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao9" class="question-group">
+                <p>9. Você passa muito tempo pensando em melhorar sua aparência física?</p>
+                <label><input type="radio" name="question9" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question9" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question9" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao10" class="question-group">
+                <p>10. Você se sente pressionado(a) a manter um determinado padrão de corpo, cabelo, pele ou estilo?</p>
+                <label><input type="radio" name="question10" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question10" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question10" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao11" class="question-group">
+                <p>11. Você já comprou roupas, cosméticos ou produtos apenas para se aproximar de um padrão de beleza?</p>
+                <label><input type="radio" name="question11" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question11" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question11" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao12" class="question-group">
+                <p>12. Você sente desconforto ao postar suas fotos sem filtros ou edição?</p>
+                <label><input type="radio" name="question12" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question12" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question12" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao13" class="question-group">
+                <p>13. Você costuma observar mais suas imperfeições do que suas qualidades físicas?</p>
+                <label><input type="radio" name="question13" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question13" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question13" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao14" class="question-group">
+                <p>14. Você já mudou sua alimentação ou rotina apenas para alcançar um padrão estético?</p>
+                <label><input type="radio" name="question14" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question14" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question14" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao15" class="question-group">
+                <p>15. Você acredita que as pessoas consideradas mais bonitas recebem mais oportunidades?</p>
+                <label><input type="radio" name="question15" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question15" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question15" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao16" class="question-group">
+                <p>16. Você sente necessidade de aprovação dos outros sobre sua aparência?</p>
+                <label><input type="radio" name="question16" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question16" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question16" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao17" class="question-group">
+                <p>17. Quando alguém é considerado muito bonito(a), você se compara automaticamente a essa pessoa?</p>
+                <label><input type="radio" name="question17" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question17" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question17" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao18" class="question-group">
+                <p>18. Você acredita que seria feliz se tivesse uma aparência diferente?</p>
+                <label><input type="radio" name="question18" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question18" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question18" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao19" class="question-group">
+                <p>19. Você sente que os padrões de beleza influenciam suas escolhas e decisões no dia a dia?</p>
+                <label><input type="radio" name="question19" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question19" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question19" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="questao20" class="question-group">
+                <p>20. Você acredita que a aparência influencia diretamente o valor de uma pessoa?</p>
+                <label><input type="radio" name="question20" value="1"> Raramente</label><br>
+                <label><input type="radio" name="question20" value="2"> Às vezes</label><br>
+                <label><input type="radio" name="question20" value="3"> Frequentemente</label>
+            </div>
+
+            <div id="button-container">
+                <button type="button" id="submit-button" class="primary-btn">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
