@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!questoesIgnoradas.includes(nomeQuestao)) {
                 totalPontos += parseInt(input.value) || 0;
                 totalRespondidasValidas++;
-                sequenciaRespostas.push(input.value);
+                sequenciaRespostas.push(input.value); // Keeps it as an Array for the backend
             }
         });
 
@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             genero: valorGenero,
             idade: valorIdade,
             pontosTotais: totalPontos,
-            respostas: sequenciaRespostas.join(",")
-            };
+            respostas: sequenciaRespostas // Passed as an array matching backend expectations
         };
 
         fetch(URL, {
