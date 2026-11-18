@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body class="quiz-page">
+
+    <header>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="conteudos.html">Conteúdos</a>
+        <a href="contatos.html">Contatos</a>
+      </nav>
+    </header>
+
+  <div class="container" style="margin-top: 50px;">
+      <h1>Dashboard de Resultados</h1>
+      <p style="margin-bottom: 9px;"></p>
+
+      <div class="nav-tabs" style="margin-bottom: 30px;">
+        <button class="tab-btn active" onclick="trocarDashboard('dash-geral', this)">Visão Geral & Demografia</button>
+        <button class="tab-btn" onclick="trocarDashboard('dash-comparativo', this)">Análise Comparativa</button>
+      </div>
+
+    <section id="dash-geral" class="dashboard-section active">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">MÉDIA DE RESPOSTAS</div>
+          <div class="kpi-value" id="total-respostas">--</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">MÉDIA DE PONTOS</div>
+          <div class="kpi-value" id="media-pontos">--</div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Distribuição por Gênero</h3>
+          <div class="canvas-container">
+            <canvas id="chartGenero"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Distribuição por Faixa Etária</h3>
+          <div class="canvas-container">
+            <canvas id="chartIdade"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dash-comparativo" class="dashboard-section">
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Proporção Etária (Visão Pizza)</h3>
+          <div class="canvas-container">
+            <canvas id="chartIdadePizza"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Comparativo de Gênero (Barras Horizontais)</h3>
+          <div class="canvas-container">
+            <canvas id="chartGeneroBarra"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

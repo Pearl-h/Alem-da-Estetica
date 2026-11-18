@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas &amp; Inspiração | Além da Estética</title>
+  <link rel="stylesheet" href="pasta.css">
+</head>
+<body class="editorial-page">
+
+  <header class="site-header">
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="conteudos.html" class="active">Conteúdos</a>
+        <a href="contatos.html">Contatos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="editorial-container">
+    <section class="editorial-header">
+      <span class="editorial-kicker">Acervo Visual &amp; Bem-Estar</span>
+      <h1 class="editorial-title">Dicas e Inspirações</h1>
+      <p class="editorial-subtitle">
+        Um espaço visual com registros, lembretes diários e frases inspiradoras para fortalecer sua autoestima e cultivar uma relação mais gentil consigo mesmo.
+      </p>
+    </section>
+
+    <section class="filter-section" aria-label="Filtrar dicas por pasta">
+      <nav class="filter-nav">
+  <ul id="dicas-filters">
+    <li><button type="button" class="filter-btn active" data-folder="todas">Todas as Pastas</button></li>
+    <li><button type="button" class="filter-btn" data-folder="autoestima">Pasta: Autoestima</button></li>
+    <li><button type="button" class="filter-btn" data-folder="skincare">Pasta: Skincare</button></li>
+    <li><button type="button" class="filter-btn" data-folder="autocuidado">Pasta: Autocuidado</button></li>
+  </ul>
+</nav>
+    </section>
+
+    <section id="conteudos" class="articles-feed-section">
+      <div class="feed-bar">
+        <h2>Galeria de Dicas</h2>
+        <span class="feed-meta" id="dicas-counter">Exibindo 6 registros</span>
+      </div>
+
+      <div class="cards-grid dicas-grid" id="dicas-container">
+      </div>
+    </section>
+  </main>
+
+  <div id="dica-modal" class="dica-modal" aria-hidden="true">
+    <div class="dica-modal-content">
+      <button type="button" class="modal-close" id="close-modal" aria-label="Fechar">&times;</button>
+      <img id="modal-img" src="" alt="">
+      <div class="modal-body">
+        <span id="modal-folder" class="folder-badge"></span>
+        <blockquote id="modal-quote" class="inspirational-quote"></blockquote>
+        <p id="modal-tip" class="dica-practical-text"></p>
+        <button type="button" id="copy-quote-btn" class="primary-btn">Copiar Frase</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="editorial-footer">
+    <div class="footer-inner">
+      <p><strong>Projeto Acadêmico — Além da Estética</strong> &copy; 2026</p>
+      <p class="footer-note">Pesquisa e divulgação científica sobre imagem corporal e autoestima.</p>
+    </div>
+  </footer>
+
+  <script src="dicas.js"></script>
+</body>
+</html>
