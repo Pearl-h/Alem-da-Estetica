@@ -60,9 +60,9 @@ header {
 .timeline-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 80px 20px 100px;
+  padding: 20px 20px 100px;
 }
 
 .timeline-line {
@@ -72,7 +72,7 @@ header {
   width: calc(100% - 100px);
   height: 4px;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, #f1c40f, #f39c12, #d99b00);
+  background: linear-gradient(90deg, #f3c81d, #f8a51f, #cc9302);
   border-radius: 999px;
   z-index: 1;
 }
@@ -83,14 +83,14 @@ header {
   align-items: center;
   position: relative;
   z-index: 2;
-  min-height: 420px;
-  gap: 20px;
+  min-height: 480px;
+  gap: 10px;
 }
 
 .timeline-item {
   position: relative;
-  width: 10%;
-  min-height: 420px;
+  flex: 1;
+  min-height: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,13 +98,13 @@ header {
 
 .node {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 46px;
-  height: 46px;
+  top: 53%;
+  left: 36%;
+  width: 42px;
+  height: 42px;
   border: 3px solid #fff;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f39c12, #d99b00);
+  background: linear-gradient(135deg, #f3c81d, #f8a51f);
   color: #fff;
   display: flex;
   align-items: center;
@@ -117,6 +117,7 @@ header {
   box-shadow: 0 8px 25px rgba(243, 156, 18, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 3;
+  overflow: hidden;
 }
 
 .node:hover {
@@ -127,8 +128,8 @@ header {
 .badge {
   position: absolute;
   left: 50%;
-  width: 110px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -137,42 +138,42 @@ header {
 }
 
 .emoji {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .badge-top {
-  bottom: 240px;
+  bottom: calc(40% + 60px);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
 }
 
 .badge-bottom {
-  top: 250px;
+  top: calc(54% + 60px);
   clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
 }
 
 .text-block {
   position: absolute;
   left: 50%;
-  width: 170px;
+  width: 155px;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(245, 183, 32, 0.35);
   border-radius: 14px;
-  padding: 14px 12px;
+  padding: 10px 8px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .text-block-top {
-  top: 60px;
+  bottom: calc(15% + 175px);
 }
 
 .text-block-bottom {
-  bottom: 55px;
+  top: calc(30% + 175px);
 }
 
 .year {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: #2c3e50;
   line-height: 1.1;
@@ -180,33 +181,38 @@ header {
 }
 
 .description {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #555;
   line-height: 1.3;
   font-weight: 600;
 }
 
-.bg-blue { background-color: #9ab4ff; }
-.bg-cyan { background-color: #8ae3eb; }
+.bg-purple { background-color: #d4b3ff; }
+.bg-blue   { background-color: #9ab4ff; }
+.bg-cyan   { background-color: #8ae3eb; }
 .bg-yellow { background-color: #f6ec8d; }
 .bg-orange { background-color: #ffb17a; }
-.bg-pink { background-color: #ff9ec7; }
+.bg-pink   { background-color: #ff9ec7; }
+.bg-green  { background-color: #9be8b8; }
+.bg-teal   { background-color: #7ee0d2; }
 
+/* Fixed Modal Overlay & Display Bug */
 .modal {
-  display: none;
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
 }
 
 .modal-content {
@@ -218,6 +224,12 @@ header {
   position: relative;
   text-align: center;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
 }
 
 .close-btn {
@@ -232,6 +244,19 @@ header {
 
 .close-btn:hover {
   color: #2c3e50;
+}
+
+.modal-tag {
+  display: inline-block;
+  background-color: #fff4d6;
+  color: #b88200;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .modal-content img {
@@ -254,15 +279,18 @@ header {
   line-height: 1.6;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   .timeline-items {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    min-height: auto;
   }
 
   .timeline-item {
-    width: 45%;
+    flex: 0 0 22%;
+    min-width: 180px;
+    min-height: auto;
   }
 
   .timeline-line {
@@ -283,6 +311,7 @@ header {
   }
 
   .timeline-item {
+    flex: 0 0 100%;
     width: 100%;
   }
 
@@ -305,6 +334,7 @@ header {
     top: auto;
     left: auto;
     transform: none;
+    margin: 10px auto;
   }
 
   .node:hover {
